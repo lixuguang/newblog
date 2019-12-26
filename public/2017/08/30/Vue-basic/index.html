@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="作者：李旭光引用请标明出处  前言最近公司技术选型选择了VUE，下面就记录一下在学习Vue中遇到的一些知识点，有些在官方手册里已经讲的很详细了，这里就简单带过，主要对cli产生的以及自行添加的一些项目目录进行一下解释，希望对正在学习Vue的同学提供一点帮助，如果本文有谬误之处还请各位指出，谢谢各位支持。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue基础">
+<meta property="og:url" content="http://yoursite.com/2017/08/30/Vue-basic/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="作者：李旭光引用请标明出处  前言最近公司技术选型选择了VUE，下面就记录一下在学习Vue中遇到的一些知识点，有些在官方手册里已经讲的很详细了，这里就简单带过，主要对cli产生的以及自行添加的一些项目目录进行一下解释，希望对正在学习Vue的同学提供一点帮助，如果本文有谬误之处还请各位指出，谢谢各位支持。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-08-30T09:03:05.000Z">
+<meta property="article:modified_time" content="2019-12-20T02:50:12.395Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="VUE">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2017/08/30/Vue-basic/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Vue基础 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/Vue-basic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-30 17:03:05" itemprop="dateCreated datePublished" datetime="2017-08-30T17:03:05+08:00">2017-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-20 10:50:12" itemprop="dateModified" datetime="2019-12-20T10:50:12+08:00">2019-12-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VUE/" itemprop="url" rel="index">
+                    <span itemprop="name">VUE</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近公司技术选型选择了VUE，下面就记录一下在学习Vue中遇到的一些知识点，有些在官方手册里已经讲的很详细了，这里就简单带过，主要对cli产生的以及自行添加的一些项目目录进行一下解释，希望对正在学习Vue的同学提供一点帮助，如果本文有谬误之处还请各位指出，谢谢各位支持。</p>
+<a id="more"></a>
+<h3 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install --global vue-cli</span><br><span class="line">vue init webpack my-project</span><br><span class="line">cd my-project</span><br><span class="line">npm install（推荐用cnpm install）</span><br><span class="line">如果没有cnpm ，先安装cnpm镜像</span><br><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<h3 id="目录讲解"><a href="#目录讲解" class="headerlink" title="目录讲解"></a>目录讲解</h3><blockquote>
+<ul>
+<li>build和config ：项目开发和打包时候的相关配置；</li>
+<li>node_modules ：项目所需要的依赖文件；</li>
+<li>src ：主应用/页面相关文件；<ul>
+<li>assets ： 静态资源文件；</li>
+<li>components ：组件；</li>
+<li>res：资源<ul>
+<li>css： 公共css或是css预处理文件；</li>
+<li>js：   公共js文件</li>
+<li>img：公共图片</li>
+</ul>
+</li>
+<li>router ：路由配置文件；</li>
+<li>views ： 视图文件，其实也是vue组件。按照业务功能划分模块；</li>
+<li>vuex : 状态管理的配置文件；</li>
+<li>App.vue : 主组件；</li>
+<li>main.js： 入口文件，初始化vue实例并使用需要的插件</li>
+</ul>
+</li>
+<li>index.html ： 主html页面；</li>
+<li>dist：webpack打包生成的文件；</li>
+<li>package.json：记录依赖相关信息</li>
+</ul>
+</blockquote>
+<h3 id="文件的加载顺序"><a href="#文件的加载顺序" class="headerlink" title="文件的加载顺序:"></a>文件的加载顺序:</h3><p>当我们执行命令 <code>npm run dev</code>的时候根据配置文件<code>dev-server.js</code>里的相关配置去加载<code>webpack</code>的相关配置文件 在<code>webpack.base.conf</code>里面<code>entry</code>入口文件就配置了<code>app：&#39;./src/main.js&#39;</code> </p>
+<p>所以当我们在运行<code>npm run dev</code>的时候就开始通过<code>main.js</code>执行了。<code>main.js</code> 初始化vue实例并且加载相关配置插件，然后通过<code>app.vue</code>文件去访问各个组件</p>
+<h3 id="Build-dev-server-js主要完成以下几件事情："><a href="#Build-dev-server-js主要完成以下几件事情：" class="headerlink" title="Build/dev-server.js主要完成以下几件事情："></a>Build/dev-server.js主要完成以下几件事情：</h3><ol>
+<li>检查node和npm的版本；</li>
+<li>引入相关插件和配置；</li>
+<li>创建express服务器和webpack编译器；</li>
+<li>配置开发中间件（webpack-dev-middleware）和热重载中间件（webpack-hot-middleware）；</li>
+<li>挂载代理服务和中间件；</li>
+<li>配置静态资源；</li>
+<li>启动服务器监听特定端口（8080）；</li>
+<li>自动打开浏览器并打开特定网址（localhost:8080）；</li>
+</ol>
+<h3 id="Build-huild-js主要完成以下几件事情："><a href="#Build-huild-js主要完成以下几件事情：" class="headerlink" title="Build/huild.js主要完成以下几件事情："></a>Build/huild.js主要完成以下几件事情：</h3><ol>
+<li>loading动画；</li>
+<li>删除创建目标文件夹；</li>
+<li>webpack编译；</li>
+<li>输出信息</li>
+</ol>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><h4 id="babelrc"><a href="#babelrc" class="headerlink" title=".babelrc"></a>.babelrc</h4><p>设置转码的规则和插件（使用es6语法必须安装插件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-preset-es2015</span><br></pre></td></tr></table></figure>
+
+<p>presets 字段是用来设定转码规则;</p>
+<h4 id="editorconfig"><a href="#editorconfig" class="headerlink" title=".editorconfig"></a>.editorconfig</h4><p>配置文件编码格式的文件</p>
+<ul>
+<li>indent_style:  设置缩进风格，tab或者空格;</li>
+<li>indent_size:  缩进的宽度;</li>
+<li>tab_width:   设置tab的列数。默认是indent_size;</li>
+<li>end_of_line： 换行符，lf、cr和crlf;</li>
+<li>charset：  编码;</li>
+<li>trim_trailing_whitespace： 设为true表示会除去换行行首的任意空白字符;</li>
+<li>insert_final_newline:   设为true表明使文件以一个空白行结尾;</li>
+<li>root: 表明是最顶层的配置文件，发现设为true时，才会停止查找.editorconfig文件;</li>
+</ul>
+<h4 id="eslintignore"><a href="#eslintignore" class="headerlink" title=".eslintignore"></a>.eslintignore</h4><p>忽略不符合eslint规范的文件, （一般会忽略掉第三方引用的插件）</p>
+<h4 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title=".eslintrc.js"></a>.eslintrc.js</h4><p>定义代码规则</p>
+<h4 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h4><p>配置文件，用于配置不需要加入版本管理的文件</p>
+<h3 id="VUE-文件解释"><a href="#VUE-文件解释" class="headerlink" title=".VUE 文件解释"></a>.VUE 文件解释</h3><ul>
+<li>template： 展示模板</li>
+<li>import ： 导入组件已经js文件</li>
+<li>export default： <ul>
+<li>data：数据源；</li>
+<li>methods：方法；                </li>
+<li>mounted：页面加载之后执行的方法；    </li>
+<li>created：页面生成时加载的方法；</li>
+</ul>
+</li>
+<li>style：  样式代码  其中scoped表示样式作用范围为本vue文件</li>
+</ul>
+<h3 id="网络访问"><a href="#网络访问" class="headerlink" title="网络访问"></a>网络访问</h3><h4 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h4><ol>
+<li>发送请求：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios#request(config)；</span><br><span class="line">axios#get(url[, config])；</span><br><span class="line">axios#delete(url[, config])；</span><br><span class="line">axios#head(url[, config])；</span><br><span class="line">axios#post(url[, data[, config]])；</span><br><span class="line">axios#put(url[, data[, config]])；</span><br><span class="line">axios#patch(url[, data[, config]])；</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>处理响应：</li>
+</ol>
+<ul>
+<li>Promise语法；</li>
+<li>处理结果：then；</li>
+<li>处理异常：catch；</li>
+</ul>
+<ol start="3">
+<li>拦截器（use/reject）：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.response.use；</span><br><span class="line">axios.interceptors.rquest.use；</span><br><span class="line">reject(移除请求拦截)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>参数：</li>
+</ol>
+<ul>
+<li>json（默认）；</li>
+<li>qs；</li>
+</ul>
+<h3 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h3><ul>
+<li>Prpos：父组件对子组件；</li>
+<li>自定义事件：子组件对父组件；</li>
+<li>消息总线：任意两个组件；</li>
+<li>状态管理：Vuex（适用于大型单页面开发）</li>
+</ul>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><ol>
+<li>配置</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;&#39;,</span><br><span class="line">      name: &#39;Hello&#39;,</span><br><span class="line">      component: Hello</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#39;#app&#39;,</span><br><span class="line">  router,</span><br><span class="line">  template: &#39;&lt;App&#x2F;&gt;&#39;,</span><br><span class="line">  components: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>导航</li>
+</ol>
+<ul>
+<li>push</li>
+<li>replace</li>
+<li>go</li>
+</ul>
+<ol start="3">
+<li>参数传递</li>
+</ol>
+<ul>
+<li>RESTful url参数</li>
+<li>参数查询 query</li>
+<li>锚点  hash: ‘#data’</li>
+</ul>
+<ol start="4">
+<li>嵌套路由</li>
+</ol>
+<ul>
+<li>Children</li>
+</ul>
+<ol start="5">
+<li>钩子</li>
+</ol>
+<ul>
+<li>beforeRouteEnter</li>
+<li>beforeRouteLeave</li>
+</ul>
+<h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><blockquote>
+<p>Vuex是什么？</p>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+</blockquote>
+<ul>
+<li>state里面就是存放的我们所要用到的状态；</li>
+<li>mutations就是存放如何更改状态的方法 ，同步操作；</li>
+<li>getters就是从state中派生出状态，比如将state中的某个状态进行过滤然后获取新的状态。</li>
+<li>actions就是mutation的加强版，它可以通过commit</li>
+<li>mutations中的方法来改变状态，最重要的是它可以进行异步操作。 </li>
+<li>modules顾名思义，就是当用这个容器来装这些状态还是显得混乱的时候，我们就可以把容器分成几块，把状态和管理规则分类来装。这和我们创建js模块是一个目的，让代码结构更清晰。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VUE/" rel="tag"># VUE</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/08/30/Vue-VSCode-Snippets/" rel="prev" title="Vue VSCode Snippets 自动生成Vue代码片段的VSCode扩展">
+      <i class="fa fa-chevron-left"></i> Vue VSCode Snippets 自动生成Vue代码片段的VSCode扩展
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/10/11/use-GitHub-Hexo-Next-make-blog/" rel="next" title="如何利用GitHub-Hexo-Next搭建一个漂亮的技术博客">
+      如何利用GitHub-Hexo-Next搭建一个漂亮的技术博客 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建项目"><span class="nav-number">1.0.1.</span> <span class="nav-text">搭建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录讲解"><span class="nav-number">1.0.2.</span> <span class="nav-text">目录讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的加载顺序"><span class="nav-number">1.0.3.</span> <span class="nav-text">文件的加载顺序:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-dev-server-js主要完成以下几件事情："><span class="nav-number">1.0.4.</span> <span class="nav-text">Build&#x2F;dev-server.js主要完成以下几件事情：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-huild-js主要完成以下几件事情："><span class="nav-number">1.0.5.</span> <span class="nav-text">Build&#x2F;huild.js主要完成以下几件事情：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">1.0.6.</span> <span class="nav-text">配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#babelrc"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">.babelrc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#editorconfig"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">.editorconfig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eslintignore"><span class="nav-number">1.0.6.3.</span> <span class="nav-text">.eslintignore</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eslintrc-js"><span class="nav-number">1.0.6.4.</span> <span class="nav-text">.eslintrc.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gitignore"><span class="nav-number">1.0.6.5.</span> <span class="nav-text">.gitignore</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VUE-文件解释"><span class="nav-number">1.0.7.</span> <span class="nav-text">.VUE 文件解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络访问"><span class="nav-number">1.0.8.</span> <span class="nav-text">网络访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios"><span class="nav-number">1.0.8.1.</span> <span class="nav-text">axios</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件通信"><span class="nav-number">1.0.9.</span> <span class="nav-text">组件通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由"><span class="nav-number">1.0.10.</span> <span class="nav-text">路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态管理"><span class="nav-number">1.0.11.</span> <span class="nav-text">状态管理</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
