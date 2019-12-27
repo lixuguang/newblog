@@ -2,11 +2,11 @@
 title: 前端面试Vue篇：Vue组件通信的几种方式
 date: 2019-12-27 22:22:22
 categories: 
-	- 博客技巧
+	- Vue基础
 tags: 
-	- Github
-	- Actions
-	- Hexo
+	- vue
+	- 面试
+	- 组件通信
 ---
 > 作者：李旭光
 > 引用请标明出处
