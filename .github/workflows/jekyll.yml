@@ -18,11 +18,11 @@ jobs:
     
     - name: Setup Hexo env
       env:
-        ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+        HEXO_DEPLOY_PRI: ${{ secrets.HEXO_DEPLOY_PRI }}
       run: |
         # set up private key for deploy
         mkdir -p ~/.ssh/
-        echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
+        echo "$HEXO_DEPLOY_PRI" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         # set git infomation
