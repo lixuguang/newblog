@@ -91,7 +91,7 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         # set git infomation
-        git config --global user.name 'lixuguang' # 换成你自己的邮箱和名字
+        git config --global user.name 'lixuguang' # 换成你自己的名字
         git config --global user.email 'lixuguang@gmail.com' # 换成你自己的邮箱
         # install dependencies
         npm i -g hexo-cli # 安装hexo
@@ -100,7 +100,9 @@ jobs:
     - name: Deploy
       run: |
         # publish
+        rm -rf .deploy_git # 如果上次构建失败这句命令会清除上次失败的代码
         hexo generate && hexo deploy # 执行部署程序
+
 
 ```
 
