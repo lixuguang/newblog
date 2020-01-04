@@ -111,6 +111,7 @@ n个记录的直接选择排序可经过n-1趟直接选择排序得到有序结�
 4.  n-1趟结束，数组有序化了。
 
 ## 2. 3 动图演示
+![ldDWW9.gif](https://s2.ax1x.com/2020/01/04/ldDWW9.gif)
 ## 2. 4 js代码实现
 ```
 // js代码
@@ -150,6 +151,7 @@ function selectionSort(arr) {
 6. 重复步骤2~5。
 
 ## 3. 3 动图演示
+![ldDfzR.gif](https://s2.ax1x.com/2020/01/04/ldDfzR.gif)
 ## 3. 4 js代码实现
 ```
 // js代码
@@ -185,6 +187,7 @@ function insertSort(arr) {
 
 简单理解就是，选择一个目标值，比目标值小的放左边，比目标值大的放右边，目标值的位置已排好，将左右两侧再进行快排。
 ## 4. 3 动图演示
+![快速排序.gif](https://i.loli.net/2020/01/04/AtNahbZF9J1dTnS.gif)
 ## 4. 4 js代码实现
 ```
 // js代码
