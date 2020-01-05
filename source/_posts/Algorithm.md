@@ -233,3 +233,311 @@ function quickSort(arr){
     return quickSort(left).concat(pivot, quickSort(right)); // 链接多个数组到 left 从小到大
 }
 ```
+# 5. 希尔排序
+## 5. 1 算法原理
+希尔排序，也称递减增量排序算法，是插入排序的一种更高效的改进版本。但希尔排序是非稳定排序算法。
+希尔排序是基于插入排序的以下两点性质而提出改进方法的：
+- 插入排序在对几乎已经排好序的数据操作时，效率高，即可以达到线性排序的效率；
+- 但插入排序一般来说是低效的，因为插入排序每次只能将数据移动一位；
+希尔排序的基本思想是：先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。
+
+## 5. 2 算法描述
+- 选择一个增量序列 t1，t2，……，tk，其中 ti > tj, tk = 1；
+- 按增量序列个数 k，对序列进行 k 趟排序；
+- 每趟排序，根据对应的增量 ti，将待排序列分割成若干长度为 m 的子序列，分别对各子表进行直接插入排序。仅增量因子为 1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
+
+## 5.3 js代码实现
+```
+// js代码
+
+function shellSort(arr) {
+    var len = arr.length,
+        temp,
+        gap = 1;
+    while(gap < len/3) {          //动态定义间隔序列
+        gap =gap*3+1;
+    }
+    for (gap; gap > 0; gap = Math.floor(gap/3)) {
+        for (var i = gap; i < len; i++) {
+            temp = arr[i];
+            for (var j = i-gap; j >= 0 && arr[j] > temp; j-=gap) {
+                arr[j+gap] = arr[j];
+            }
+            arr[j+gap] = temp;
+        }
+    }
+    return arr;
+}
+```
+
+# 6. 归并排序
+## 6. 1 算法原理
+归并排序（Merge sort）是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。
+作为一种典型的分而治之思想的算法应用，归并排序的实现由两种方法：
+- 自上而下的递归（所有递归的方法都可以用迭代重写，所以就有了第 2 种方法）；
+- 自下而上的迭代；
+> 在《数据结构与算法 JavaScript 描述》中，作者给出了自下而上的迭代方法。但是对于递归法，作者却认为：
+However, it is not possible to do so in JavaScript, as the recursion goes too deep for the language to handle.
+然而，在 JavaScript 中这种方式不太可行，因为这个算法的递归深度对它来讲太深了。
+
+说实话，我不太理解这句话。意思是 JavaScript 编译器内存太小，递归太深容易造成内存溢出吗？还望有大神能够指教。
+
+和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是 O(nlogn) 的时间复杂度。代价是需要额外的内存空间。
+
+## 6. 2 算法描述
+1. 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；
+2. 设定两个指针，最初位置分别为两个已经排序序列的起始位置；
+3. 比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；
+4. 重复步骤 3 直到某一指针达到序列尾；
+5. 将另一序列剩下的所有元素直接复制到合并序列尾。
+
+## 6. 3 动图演示
+![归并排序.gif](https://i.loli.net/2020/01/04/WMFo8Au4CGah6Kv.gif)
+## 6. 4 js代码实现
+```
+// js代码
+
+function mergeSort(arr) {  // 采用自上而下的递归方法
+    var len = arr.length;
+    if(len < 2) {
+        return arr;
+    }
+    var middle = Math.floor(len / 2),
+        left = arr.slice(0, middle),
+        right = arr.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right){
+    var result = [];
+    while (left.length && right.length) {
+        if (left[0] <= right[0]) {
+            result.push(left.shift());
+        } else {
+            result.push(right.shift());
+        }
+    }
+
+    while (left.length)
+        result.push(left.shift());
+
+    while (right.length)
+        result.push(right.shift());
+
+    return result;
+}
+```
+
+# 7. 堆排序
+## 7. 1 算法原理
+堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。堆排序可以说是一种利用堆的概念来排序的选择排序。分为两种方法：
+- 大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列；
+- 小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列；
+堆排序的平均时间复杂度为 Ο(nlogn)。
+
+# 7. 2 算法描述
+1. 将待排序序列构建成一个堆 H[0……n-1]，根据（升序降序需求）选择大顶堆或小顶堆；
+2. 把堆首（最大值）和堆尾互换；
+3. 把堆的尺寸缩小 1，并调用 shift_down(0)，目的是把新的数组顶端数据调整到相应位置；
+4. 重复步骤 2，直到堆的尺寸为 1。
+
+## 7. 3 动图演示
+![堆排序.gif](https://s2.ax1x.com/2020/01/05/lBK9QH.gif)
+
+## 7. 4 js代码实现
+```
+// js代码
+
+var len;    // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+
+function buildMaxHeap(arr) {   // 建立大顶堆
+    len = arr.length;
+    for (var i = Math.floor(len/2); i >= 0; i--) {
+        heapify(arr, i);
+    }
+}
+
+function heapify(arr, i) {     // 堆调整
+    var left = 2 * i + 1,
+        right = 2 * i + 2,
+        largest = i;
+
+    if (left < len && arr[left] > arr[largest]) {
+        largest = left;
+    }
+
+    if (right < len && arr[right] > arr[largest]) {
+        largest = right;
+    }
+
+    if (largest != i) {
+        swap(arr, i, largest);
+        heapify(arr, largest);
+    }
+}
+
+function swap(arr, i, j) {
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+function heapSort(arr) {
+    buildMaxHeap(arr);
+
+    for (var i = arr.length-1; i > 0; i--) {
+        swap(arr, 0, i);
+        len--;
+        heapify(arr, 0);
+    }
+    return arr;
+}
+```
+
+# 8. 计数排序
+## 8. 1 算法原理
+计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。
+
+## 8. 2 算法描述
+## 8. 3 动图演示
+![计数排序.gif](https://s2.ax1x.com/2020/01/05/lBKq1g.gif)
+## 8. 4 js代码实现
+```
+// js代码
+
+function countingSort(arr, maxValue) {
+    var bucket = new Array(maxValue+1),
+        sortedIndex = 0;
+        arrLen = arr.length,
+        bucketLen = maxValue + 1;
+
+    for (var i = 0; i < arrLen; i++) {
+        if (!bucket[arr[i]]) {
+            bucket[arr[i]] = 0;
+        }
+        bucket[arr[i]]++;
+    }
+
+    for (var j = 0; j < bucketLen; j++) {
+        while(bucket[j] > 0) {
+            arr[sortedIndex++] = j;
+            bucket[j]--;
+        }
+    }
+
+    return arr;
+}
+```
+
+# 9. 桶排序
+## 9. 1 算法原理
+桶排序是计数排序的升级版。它利用了函数的映射关系，高效与否的关键就在于这个映射函数的确定。为了使桶排序更加高效，我们需要做到这两点：
+- 在额外空间充足的情况下，尽量增大桶的数量
+- 使用的映射函数能够将输入的 N 个数据均匀的分配到 K 个桶中
+同时，对于桶中元素的排序，选择何种比较排序算法对于性能的影响至关重要。
+## 9. 2 算法描述
+### 1. 什么时候最快
+当输入的数据可以均匀的分配到每一个桶中。
+### 2. 什么时候最慢
+当输入的数据被分配到了同一个桶中。
+## 9. 3 动图演示
+
+## 9. 4 js代码实现
+```
+// js代码
+
+function bucketSort(arr, bucketSize) {
+    if (arr.length === 0) {
+      return arr;
+    }
+
+    var i;
+    var minValue = arr[0];
+    var maxValue = arr[0];
+    for (i = 1; i < arr.length; i++) {
+      if (arr[i] < minValue) {
+          minValue = arr[i];                // 输入数据的最小值
+      } else if (arr[i] > maxValue) {
+          maxValue = arr[i];                // 输入数据的最大值
+      }
+    }
+
+    //桶的初始化
+    var DEFAULT_BUCKET_SIZE = 5;            // 设置桶的默认数量为5
+    bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;
+    var bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;   
+    var buckets = new Array(bucketCount);
+    for (i = 0; i < buckets.length; i++) {
+        buckets[i] = [];
+    }
+
+    //利用映射函数将数据分配到各个桶中
+    for (i = 0; i < arr.length; i++) {
+        buckets[Math.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);
+    }
+
+    arr.length = 0;
+    for (i = 0; i < buckets.length; i++) {
+        insertionSort(buckets[i]);                      // 对每个桶进行排序，这里使用了插入排序
+        for (var j = 0; j < buckets[i].length; j++) {
+            arr.push(buckets[i][j]);                      
+        }
+    }
+
+    return arr;
+}
+```
+
+# 10. 基数排序
+## 10. 1 算法原理
+基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。
+
+## 10. 2 算法描述
+### 1. 基数排序 vs 计数排序 vs 桶排序
+基数排序有三种方法：
+这三种排序算法都利用了桶的概念，但对桶的使用方法上有明显差异案例看大家发的：
+- 基数排序：根据键值的每位数字来分配桶；
+- 计数排序：每个桶只存储单一键值；
+- 桶排序：每个桶存储一定范围的数值；
+## 10. 3 动图演示
+2. LSD 基数排序动图演示
+![基数排序.gif](https://s2.ax1x.com/2020/01/05/lBQkPf.gif)
+## 10. 4 js代码实现
+```
+// js代码
+
+// LSD Radix Sort
+var counter = [];
+function radixSort(arr, maxDigit) {
+    var mod = 10;
+    var dev = 1;
+    for (var i = 0; i < maxDigit; i++, dev *= 10, mod *= 10) {
+        for(var j = 0; j < arr.length; j++) {
+            var bucket = parseInt((arr[j] % mod) / dev);
+            if(counter[bucket]==null) {
+                counter[bucket] = [];
+            }
+            counter[bucket].push(arr[j]);
+        }
+        var pos = 0;
+        for(var j = 0; j < counter.length; j++) {
+            var value = null;
+            if(counter[j]!=null) {
+                while ((value = counter[j].shift()) != null) {
+                      arr[pos++] = value;
+                }
+          }
+        }
+    }
+    return arr;
+}
+```
+
+# 总结
+![排序算法.png](https://s2.ax1x.com/2020/01/05/lBQTSS.png)
+以上就是十大经典算法，算法对于前端来说并不是一个十分熟悉的领域，但是排序算法算是算法里比较入门的，还是需要掌握的，毕竟即使是为了面试也是要准备的。
+
+## 参考资料
+https://github.com/hustcc/JS-Sorting-Algorithm
+一本关于排序算法的 GitBook 在线书籍 《十大经典排序算法》，多语言实现。
+
