@@ -541,3 +541,5 @@ function radixSort(arr, maxDigit) {
 https://github.com/hustcc/JS-Sorting-Algorithm
 一本关于排序算法的 GitBook 在线书籍 《十大经典排序算法》，多语言实现。
 
+http://www.sohu.com/a/136157205_671058
+技术面试宝典： 很全面的算法和数据结构知识（含代码实现）下篇
