@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://lixuguang.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="学习 | 生活 | 一切">
+<meta property="og:type" content="website">
+<meta property="og:title" content="李旭光的技术博客">
+<meta property="og:url" content="http://lixuguang.github.io/page/3/index.html">
+<meta property="og:site_name" content="李旭光的技术博客">
+<meta property="og:description" content="学习 | 生活 | 一切">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="李旭光">
+<meta property="article:tag" content="李旭光">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://lixuguang.github.io/page/3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>李旭光的技术博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李旭光的技术博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">求知若饥，虚心若愚。</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/lixuguang" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-Promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-Promise/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- Promise</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 10:52:00 / 修改时间：11:00:49" itemprop="dateCreated datePublished" datetime="2020-01-03T10:52:00+08:00">2020-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="Promise-实现"><a href="#Promise-实现" class="headerlink" title="Promise 实现"></a><code>Promise</code> 实现</h1><p><code>Promise</code> 是 <code>ES6</code> 新增的语法，解决了回调地狱的问题。</p>
+<p>可以把 <code>Promise</code> 看成一个状态机。初始是 <code>pending</code> 状态，可以通过函数 <code>resolve</code> 和 <code>reject</code> ，将状态转变为 <code>resolved</code> 或者 <code>rejected</code> 状态，<strong><em>状态一旦改变就不能再次变化</em></strong>。</p>
+<p><code>then</code> 函数会返回一个 <code>Promise</code> 实例，并且该返回值是一个新的实例而不是之前的实例。因为 <code>Promise</code> 规范规定除了 <code>pending</code> 状态，其他状态是不可以改变的，如果返回的是一个相同实例的话，多个 <code>then</code> 调用就失去意义了。</p>
+<p>对于 <code>then</code> 来说，本质上可以把它看成是 <code>flatMap</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 三种状态</span><br><span class="line">const PENDING &#x3D; &quot;pending&quot;;</span><br><span class="line">const RESOLVED &#x3D; &quot;resolved&quot;;</span><br><span class="line">const REJECTED &#x3D; &quot;rejected&quot;;</span><br><span class="line">&#x2F;&#x2F; promise 接收一个函数参数，该函数会立即执行</span><br><span class="line">function MyPromise(fn) &#123;</span><br><span class="line">  let _this &#x3D; this;</span><br><span class="line">  _this.currentState &#x3D; PENDING;</span><br><span class="line">  _this.value &#x3D; undefined;</span><br><span class="line">  &#x2F;&#x2F; 用于保存 then 中的回调，只有当 promise</span><br><span class="line">  &#x2F;&#x2F; 状态为 pending 时才会缓存，并且每个实例至多缓存一个</span><br><span class="line">  _this.resolvedCallbacks &#x3D; [];</span><br><span class="line">  _this.rejectedCallbacks &#x3D; [];</span><br><span class="line"></span><br><span class="line">  _this.resolve &#x3D; function (value) &#123;</span><br><span class="line">    if (value instanceof MyPromise) &#123;</span><br><span class="line">      &#x2F;&#x2F; 如果 value 是个 Promise，递归执行</span><br><span class="line">      return value.then(_this.resolve, _this.reject)</span><br><span class="line">    &#125;</span><br><span class="line">    setTimeout(() &#x3D;&gt; &#123; &#x2F;&#x2F; 异步执行，保证执行顺序</span><br><span class="line">      if (_this.currentState &#x3D;&#x3D;&#x3D; PENDING) &#123;</span><br><span class="line">        _this.currentState &#x3D; RESOLVED;</span><br><span class="line">        _this.value &#x3D; value;</span><br><span class="line">        _this.resolvedCallbacks.forEach(cb &#x3D;&gt; cb());</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  _this.reject &#x3D; function (reason) &#123;</span><br><span class="line">    setTimeout(() &#x3D;&gt; &#123; &#x2F;&#x2F; 异步执行，保证执行顺序</span><br><span class="line">      if (_this.currentState &#x3D;&#x3D;&#x3D; PENDING) &#123;</span><br><span class="line">        _this.currentState &#x3D; REJECTED;</span><br><span class="line">        _this.value &#x3D; reason;</span><br><span class="line">        _this.rejectedCallbacks.forEach(cb &#x3D;&gt; cb());</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 用于解决以下问题</span><br><span class="line">  &#x2F;&#x2F; new Promise(() &#x3D;&gt; throw Error(&#39;error))</span><br><span class="line">  try &#123;</span><br><span class="line">    fn(_this.resolve, _this.reject);</span><br><span class="line">  &#125; catch (e) &#123;</span><br><span class="line">    _this.reject(e);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MyPromise.prototype.then &#x3D; function (onResolved, onRejected) &#123;</span><br><span class="line">  var self &#x3D; this;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.2.7，then 必须返回一个新的 promise</span><br><span class="line">  var promise2;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.2.onResolved 和 onRejected 都为可选参数</span><br><span class="line">  &#x2F;&#x2F; 如果类型不是函数需要忽略，同时也实现了透传</span><br><span class="line">  &#x2F;&#x2F; Promise.resolve(4).then().then((value) &#x3D;&gt; console.log(value))</span><br><span class="line">  onResolved &#x3D; typeof onResolved &#x3D;&#x3D;&#x3D; &#39;function&#39; ? onResolved : v &#x3D;&gt; v;</span><br><span class="line">  onRejected &#x3D; typeof onRejected &#x3D;&#x3D;&#x3D; &#39;function&#39; ? onRejected : r &#x3D;&gt; throw r;</span><br><span class="line"></span><br><span class="line">  if (self.currentState &#x3D;&#x3D;&#x3D; RESOLVED) &#123;</span><br><span class="line">    return (promise2 &#x3D; new MyPromise(function (resolve, reject) &#123;</span><br><span class="line">      &#x2F;&#x2F; 规范 2.2.4，保证 onFulfilled，onRjected 异步执行</span><br><span class="line">      &#x2F;&#x2F; 所以用了 setTimeout 包裹下</span><br><span class="line">      setTimeout(function () &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          var x &#x3D; onResolved(self.value);</span><br><span class="line">          resolutionProcedure(promise2, x, resolve, reject);</span><br><span class="line">        &#125; catch (reason) &#123;</span><br><span class="line">          reject(reason);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (self.currentState &#x3D;&#x3D;&#x3D; REJECTED) &#123;</span><br><span class="line">    return (promise2 &#x3D; new MyPromise(function (resolve, reject) &#123;</span><br><span class="line">      setTimeout(function () &#123;</span><br><span class="line">        &#x2F;&#x2F; 异步执行onRejected</span><br><span class="line">        try &#123;</span><br><span class="line">          var x &#x3D; onRejected(self.value);</span><br><span class="line">          resolutionProcedure(promise2, x, resolve, reject);</span><br><span class="line">        &#125; catch (reason) &#123;</span><br><span class="line">          reject(reason);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (self.currentState &#x3D;&#x3D;&#x3D; PENDING) &#123;</span><br><span class="line">    return (promise2 &#x3D; new MyPromise(function (resolve, reject) &#123;</span><br><span class="line">      self.resolvedCallbacks.push(function () &#123;</span><br><span class="line">        &#x2F;&#x2F; 考虑到可能会有报错，所以使用 try&#x2F;catch 包裹</span><br><span class="line">        try &#123;</span><br><span class="line">          var x &#x3D; onResolved(self.value);</span><br><span class="line">          resolutionProcedure(promise2, x, resolve, reject);</span><br><span class="line">        &#125; catch (r) &#123;</span><br><span class="line">          reject(r);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      self.rejectedCallbacks.push(function () &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          var x &#x3D; onRejected(self.value);</span><br><span class="line">          resolutionProcedure(promise2, x, resolve, reject);</span><br><span class="line">        &#125; catch (r) &#123;</span><br><span class="line">          reject(r);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F; 规范 2.3</span><br><span class="line">function resolutionProcedure(promise2, x, resolve, reject) &#123;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.3.1，x 不能和 promise2 相同，避免循环引用</span><br><span class="line">  if (promise2 &#x3D;&#x3D;&#x3D; x) &#123;</span><br><span class="line">    return reject(new TypeError(&quot;Error&quot;));</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.3.2</span><br><span class="line">  &#x2F;&#x2F; 如果 x 为 Promise，状态为 pending 需要继续等待否则执行</span><br><span class="line">  if (x instanceof MyPromise) &#123;</span><br><span class="line">    if (x.currentState &#x3D;&#x3D;&#x3D; PENDING) &#123;</span><br><span class="line">      x.then(function (value) &#123;</span><br><span class="line">        &#x2F;&#x2F; 再次调用该函数是为了确认 x resolve 的</span><br><span class="line">        &#x2F;&#x2F; 参数是什么类型，如果是基本类型就再次 resolve</span><br><span class="line">        &#x2F;&#x2F; 把值传给下个 then</span><br><span class="line">        resolutionProcedure(promise2, value, resolve, reject);</span><br><span class="line">      &#125;, reject);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      x.then(resolve, reject);</span><br><span class="line">    &#125;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.3.3.3.3</span><br><span class="line">  &#x2F;&#x2F; reject 或者 resolve 其中一个执行过得话，忽略其他的</span><br><span class="line">  let called &#x3D; false;</span><br><span class="line">  &#x2F;&#x2F; 规范 2.3.3，判断 x 是否为对象或者函数</span><br><span class="line">  if (x !&#x3D;&#x3D; null &amp;&amp; (typeof x &#x3D;&#x3D;&#x3D; &quot;object&quot; || typeof x &#x3D;&#x3D;&#x3D; &quot;function&quot;)) &#123;</span><br><span class="line">    &#x2F;&#x2F; 规范 2.3.3.2，如果不能取出 then，就 reject</span><br><span class="line">    try &#123;</span><br><span class="line">      &#x2F;&#x2F; 规范 2.3.3.1</span><br><span class="line">      let then &#x3D; x.then;</span><br><span class="line">      &#x2F;&#x2F; 如果 then 是函数，调用 x.then</span><br><span class="line">      if (typeof then &#x3D;&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">        &#x2F;&#x2F; 规范 2.3.3.3</span><br><span class="line">        then.call(</span><br><span class="line">          x,</span><br><span class="line">          y &#x3D;&gt; &#123;</span><br><span class="line">            if (called) return;</span><br><span class="line">            called &#x3D; true;</span><br><span class="line">            &#x2F;&#x2F; 规范 2.3.3.3.1</span><br><span class="line">            resolutionProcedure(promise2, y, resolve, reject);</span><br><span class="line">          &#125;,</span><br><span class="line">          e &#x3D;&gt; &#123;</span><br><span class="line">            if (called) return;</span><br><span class="line">            called &#x3D; true;</span><br><span class="line">            reject(e);</span><br><span class="line">          &#125;</span><br><span class="line">        );</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        &#x2F;&#x2F; 规范 2.3.3.4</span><br><span class="line">        resolve(x);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; catch (e) &#123;</span><br><span class="line">      if (called) return;</span><br><span class="line">      called &#x3D; true;</span><br><span class="line">      reject(e);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    &#x2F;&#x2F; 规范 2.3.4，x 为基本类型</span><br><span class="line">    resolve(x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上就是根据 <code>Promise / A+</code> 规范来实现的代码，可以通过 <code>promises-aplus-tests</code> 的完整测试</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-call-apply-bind/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-call-apply-bind/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- call, apply, bind 区别</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 10:19:00 / 修改时间：10:19:16" itemprop="dateCreated datePublished" datetime="2020-01-03T10:19:00+08:00">2020-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="call-apply-bind-区别"><a href="#call-apply-bind-区别" class="headerlink" title="call, apply, bind 区别"></a>call, apply, bind 区别</h1><p>首先说下前两者的异同。<br>相同： <code>call</code> 和 <code>apply</code> 都是为了解决改变 <code>this</code> 的指向。<br>不同：传参的方式不同，除了第一个参数外， <code>call</code> 可以接收一个参数<strong><em>列表</em></strong>， <code>apply</code> 只接受一个参数<strong><em>数组</em></strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line">let anObj &#x3D; &#123;</span><br><span class="line">    value: 1</span><br><span class="line">&#125;</span><br><span class="line">function getValue(name, age) &#123;</span><br><span class="line">    console.log(name)</span><br><span class="line">    console.log(age)</span><br><span class="line">    console.log(this.value)</span><br><span class="line">&#125;</span><br><span class="line">getValue.call(anObj, &#39;lixuguang&#39;, &#39;31&#39;)</span><br><span class="line">getValue.apply(anObj, [&#39;lixuguang&#39;, &#39;31&#39;])</span><br></pre></td></tr></table></figure>
+<h2 id="模拟实现-call-和-apply"><a href="#模拟实现-call-和-apply" class="headerlink" title="模拟实现 call 和 apply"></a>模拟实现 <code>call</code> 和 <code>apply</code></h2><p>可以从以下几点来考虑如何实现</p>
+<ul>
+<li>不传入第一个参数，那么默认为 <code>window</code></li>
+<li>改变了 <code>this</code> 指向，让新的对象可以执行该函数。那么思路是否可以变成给新的对象添加一个函数，然后在执行完以后删除？<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">Function.prototype.myCall &#x3D; function (context) &#123;</span><br><span class="line">  var context &#x3D; context || window &#x2F;&#x2F; 有入参用入参，没有给 window</span><br><span class="line">  context.fn &#x3D; this  &#x2F;&#x2F; 给 context 添加一个属性，getValue.call(anObj, &#39;lixuguang&#39;, &#39;31&#39;) &#x3D;&gt; anObj.fn &#x3D; getValue</span><br><span class="line">  var args &#x3D; [...arguments].slice(1) &#x2F;&#x2F; 将 context 后面的参数取出来</span><br><span class="line">  var result &#x3D; context.fn(...args) &#x2F;&#x2F; getValue.call(anObj, &#39;lixuguang&#39;, &#39;31&#39;) &#x3D;&gt; anObj.fn(&#39;yck&#39;, &#39;24&#39;)</span><br><span class="line">  delete context.fn &#x2F;&#x2F; 删除 fn</span><br><span class="line">  return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+以上就是 call 的思路，apply 的实现也类似<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">Function.prototype.Apply &#x3D; function (context) &#123;</span><br><span class="line">  var context &#x3D; context || window &#x2F;&#x2F; 有入参用入参，没有给 window</span><br><span class="line">  context.fn &#x3D; this  &#x2F;&#x2F; 给 context 添加一个属性，getValue.call(anObj, &#39;lixuguang&#39;, &#39;31&#39;) &#x3D;&gt; anObj.fn &#x3D; getValue</span><br><span class="line">  var args &#x3D; arguments[1] &#x2F;&#x2F; 将 context 后面的参数取出来</span><br><span class="line">  var result &#x3D; args?context.fn(...args):context.fn() &#x2F;&#x2F; getValue.call(anObj, [&#39;lixuguang&#39;, &#39;31&#39;]) &#x3D;&gt; anObj.fn(&#39;yck&#39;, &#39;24&#39;)</span><br><span class="line">  delete context.fn &#x2F;&#x2F; 删除 fn</span><br><span class="line">  return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<code>bind</code> 和其他两个方法作用也是一致的，只是该方法会返回一个函数。并且我们可以通过 <code>bind</code> 实现柯里化。</li>
+</ul>
+<p>同样的，也来模拟实现下 <code>bind</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">Function.prototype.myBind &#x3D; function (context) &#123;</span><br><span class="line">  if (typeof this !&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">    throw new TypeError(&#39;Error&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">  var _this &#x3D; this</span><br><span class="line">  var args &#x3D; [...arguments].slice(1)</span><br><span class="line">  </span><br><span class="line">  return function F() &#123; &#x2F;&#x2F; 返回一个函数，这是 &#96;bind&#96; 和 &#96;call&#96; ， &#96;apply&#96; 的区别</span><br><span class="line">    if (this instanceof F) &#123; &#x2F;&#x2F; 因为返回了一个函数，我们可以 new F()，所以需要判断</span><br><span class="line">      return new _this(...args, ...arguments)</span><br><span class="line">    &#125;</span><br><span class="line">    return _this.apply(context, args.concat(...arguments))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-inherit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-inherit/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 继承</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 09:40:00 / 修改时间：09:42:09" itemprop="dateCreated datePublished" datetime="2020-01-03T09:40:00+08:00">2020-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>在 ES5 中，我们可以使用如下方式解决继承的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line">function Super() &#123;&#125;</span><br><span class="line">Super.prototype.getNumber &#x3D; function() &#123;</span><br><span class="line">  return 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Sub() &#123;&#125;</span><br><span class="line">let s &#x3D; new Sub()</span><br><span class="line">Sub.prototype &#x3D; Object.create(Super.prototype, &#123;</span><br><span class="line">  constructor: &#123;</span><br><span class="line">    value: Sub,</span><br><span class="line">    enumerable: false,</span><br><span class="line">    writable: true,</span><br><span class="line">    configurable: true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>以上继承实现思路就是将子类的原型设置为父类的原型<br>在 <code>ES6</code> 中，我们可以通过 <code>class</code> 语法轻松解决这个问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">class MyDate extends Date &#123;</span><br><span class="line">  test() &#123;</span><br><span class="line">    return this.getTime()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">let myDate &#x3D; new MyDate()</span><br><span class="line">myDate.test()</span><br></pre></td></tr></table></figure>
+<p>但是 <code>ES6</code> 不是所有浏览器都兼容，所以我们需要使用 <code>Babel</code> 来编译这段代码。</p>
+<p>如果你使用编译过得代码调用 <code>myDate.test()</code> 你会惊奇地发现出现了报错</p>
+<p>因为在 <code>JS</code> 底层有限制，如果不是由 <code>Date</code> 构造出来的实例的话，是不能调用 <code>Date</code> 里的函数的。所以这也侧面的说明了：<strong><em>ES6 中的 class 继承与 ES5 中的一般继承写法是不同的</em></strong>。</p>
+<p>既然底层限制了实例必须由 <code>Date</code> 构造出来，那么我们可以改变下思路实现继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function MyData() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">MyData.prototype.test &#x3D; function () &#123;</span><br><span class="line">  return this.getTime()</span><br><span class="line">&#125;</span><br><span class="line">let d &#x3D; new Date() &#x2F;&#x2F; 父类实例</span><br><span class="line">Object.setPrototypeOf(d, MyData.prototype)</span><br><span class="line">Object.setPrototypeOf(MyData.prototype, Date.prototype)</span><br></pre></td></tr></table></figure>
+<p>以上继承实现思路：先创建父类实例 =&gt; 改变实例原先的 <code>__proto__</code> 转而连接到子类的 <code>prototype</code> =&gt; 子类的 <code>prototype</code> 的 <code>__proto__</code> 改为父类的 <code>prototype</code>。</p>
+<p>通过以上方法实现的继承就可以完美解决 JS 底层的这个限制。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-debounce-throttle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-debounce-throttle/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 函数防抖和节流</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 09:04:00 / 修改时间：09:04:28" itemprop="dateCreated datePublished" datetime="2020-01-03T09:04:00+08:00">2020-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="函数防抖和节流"><a href="#函数防抖和节流" class="headerlink" title="函数防抖和节流"></a>函数防抖和节流</h1><p>在前端开发的过程中，我们经常会需要绑定一些持续触发的事件，如 resize、scroll、mousemove 等等，但有些时候我们并不希望在事件持续触发的过程中那么频繁地去执行函数。</p>
+<p>通常这种情况下我们怎么去解决的呢？一般来讲，防抖和节流是比较好的解决方案。</p>
+<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p>你是否在日常开发中遇到一个问题，在滚动事件中需要做个复杂计算或者实现一个按钮的防二次点击操作。</p>
+<p>这些需求都可以通过函数防抖动来实现。尤其是第一个需求，如果在频繁的事件回调中做复杂计算，很有可能导致页面卡顿，不如将多次计算合并为一次计算，只在一个精确点做操作。</p>
+<p>PS：防抖和节流的作用都是防止函数多次调用。区别在于，假设一个用户一直触发这个函数，且每次触发函数的间隔小于wait，防抖的情况下只会调用一次，而节流的 情况会每隔一定时间（参数wait）调用函数。</p>
+<p>我们先来看一个袖珍版的防抖理解一下防抖的实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; func是用户传入需要防抖的函数</span><br><span class="line">&#x2F;&#x2F; wait是等待时间</span><br><span class="line">const debounce &#x3D; (func, wait &#x3D; 50) &#x3D;&gt; &#123;</span><br><span class="line">  &#x2F;&#x2F; 缓存一个定时器id</span><br><span class="line">  let timer &#x3D; 0</span><br><span class="line">  &#x2F;&#x2F; 这里返回的函数是每次用户实际调用的防抖函数</span><br><span class="line">  &#x2F;&#x2F; 如果已经设定过定时器了就清空上一次的定时器</span><br><span class="line">  &#x2F;&#x2F; 开始一个新的定时器，延迟执行用户传入的方法</span><br><span class="line">  return function(...args) &#123;</span><br><span class="line">    if (timer) clearTimeout(timer)</span><br><span class="line">    timer &#x3D; setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">      func.apply(this, args)</span><br><span class="line">    &#125;, wait)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 不难看出如果用户调用该函数的间隔小于wait的情况下，上一次的时间还未到就被清除了，并不会执行函数</span><br></pre></td></tr></table></figure>
+<p>这是一个简单版的防抖，但是有缺陷，这个防抖只能在最后调用。一般的防抖会有immediate选项，表示是否立即调用。这两者的区别，举个栗子来说：</p>
+<ul>
+<li>例如在搜索引擎搜索问题的时候，我们当然是希望用户输入完最后一个字才调用查询接口，这个时候适用延迟执行的防抖函数，它总是在一连串（间隔小于wait的）函数触发之后调用。</li>
+<li>例如用户给某系统表单点提交的时候，我们希望用户点第一下的时候就去调用接口，这个情况适用立即执行的防抖函数，它总是在第一次调用，并且下一次调用必须与前一次调用的时间间隔大于wait才会触发。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 这个是用来获取当前时间戳的</span><br><span class="line">function now() &#123;</span><br><span class="line">  return +new Date()</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 防抖函数，返回函数连续调用时，空闲时间必须大于或等于 wait，func 才会执行</span><br><span class="line"> *</span><br><span class="line"> * @param  &#123;function&#125; func        回调函数</span><br><span class="line"> * @param  &#123;number&#125;   wait        表示时间窗口的间隔</span><br><span class="line"> * @param  &#123;boolean&#125;  immediate   设置为ture时，是否立即调用函数</span><br><span class="line"> * @return &#123;function&#125;             返回客户调用函数</span><br><span class="line"> *&#x2F;</span><br><span class="line">function debounce (func, wait &#x3D; 50, immediate &#x3D; true) &#123;</span><br><span class="line">  let timer, context, args</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 延迟执行函数</span><br><span class="line">  const later &#x3D; () &#x3D;&gt; setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; 延迟函数执行完毕，清空缓存的定时器序号</span><br><span class="line">    timer &#x3D; null</span><br><span class="line">    &#x2F;&#x2F; 延迟执行的情况下，函数会在延迟函数中执行</span><br><span class="line">    &#x2F;&#x2F; 使用到之前缓存的参数和上下文</span><br><span class="line">    if (!immediate) &#123;</span><br><span class="line">      func.apply(context, args)</span><br><span class="line">      context &#x3D; args &#x3D; null</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, wait)</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 这里返回的函数是每次实际调用的函数</span><br><span class="line">  return function(...params) &#123;</span><br><span class="line">    &#x2F;&#x2F; 如果没有创建延迟执行函数（later），就创建一个</span><br><span class="line">    if (!timer) &#123;</span><br><span class="line">      timer &#x3D; later()</span><br><span class="line">      &#x2F;&#x2F; 如果是立即执行，调用函数</span><br><span class="line">      &#x2F;&#x2F; 否则缓存参数和调用上下文</span><br><span class="line">      if (immediate) &#123;</span><br><span class="line">        func.apply(this, params)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        context &#x3D; this</span><br><span class="line">        args &#x3D; params</span><br><span class="line">      &#125;</span><br><span class="line">    &#x2F;&#x2F; 如果已有延迟执行函数（later），调用的时候清除原来的并重新设定一个</span><br><span class="line">    &#x2F;&#x2F; 这样做延迟函数会重新计时</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      clearTimeout(timer)</span><br><span class="line">      timer &#x3D; later()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>整体函数实现的不难，总结一下。</p>
+<ul>
+<li>对于按钮防点击来说的实现：如果函数是立即执行的，就立即调用，如果函数是延迟执行的，就缓存上下文和参数，放到延迟函数中去执行。一旦我开始一个定时器，只要我定时器还在，你每次点击我都重新计时。一旦你点累了，定时器时间到，定时器重置为 null，就可以再次点击了。</li>
+<li>对于延时执行函数来说的实现：清除定时器ID，如果是延迟调用就调用函数</li>
+</ul>
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p>防抖动和节流本质是不一样的。防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * underscore 节流函数，返回函数连续调用时，func 执行频率限定为 次 &#x2F; wait</span><br><span class="line"> *</span><br><span class="line"> * @param  &#123;function&#125;   func      回调函数</span><br><span class="line"> * @param  &#123;number&#125;     wait      表示时间窗口的间隔</span><br><span class="line"> * @param  &#123;object&#125;     options   如果想忽略开始函数的的调用，传入&#123;leading: false&#125;。</span><br><span class="line"> *                                如果想忽略结尾函数的调用，传入&#123;trailing: false&#125;</span><br><span class="line"> *                                两者不能共存，否则函数不能执行</span><br><span class="line"> * @return &#123;function&#125;             返回客户调用函数</span><br><span class="line"> *&#x2F;</span><br><span class="line">_.throttle &#x3D; function(func, wait, options) &#123;</span><br><span class="line">    var context, args, result;</span><br><span class="line">    var timeout &#x3D; null;</span><br><span class="line">    &#x2F;&#x2F; 之前的时间戳</span><br><span class="line">    var previous &#x3D; 0;</span><br><span class="line">    &#x2F;&#x2F; 如果 options 没传则设为空对象</span><br><span class="line">    if (!options) options &#x3D; &#123;&#125;;</span><br><span class="line">    &#x2F;&#x2F; 定时器回调函数</span><br><span class="line">    var later &#x3D; function() &#123;</span><br><span class="line">      &#x2F;&#x2F; 如果设置了 leading，就将 previous 设为 0</span><br><span class="line">      &#x2F;&#x2F; 用于下面函数的第一个 if 判断</span><br><span class="line">      previous &#x3D; options.leading &#x3D;&#x3D;&#x3D; false ? 0 : _.now();</span><br><span class="line">      &#x2F;&#x2F; 置空一是为了防止内存泄漏，二是为了下面的定时器判断</span><br><span class="line">      timeout &#x3D; null;</span><br><span class="line">      result &#x3D; func.apply(context, args);</span><br><span class="line">      if (!timeout) context &#x3D; args &#x3D; null;</span><br><span class="line">    &#125;;</span><br><span class="line">    return function() &#123;</span><br><span class="line">      &#x2F;&#x2F; 获得当前时间戳</span><br><span class="line">      var now &#x3D; _.now();</span><br><span class="line">      &#x2F;&#x2F; 首次进入前者肯定为 true</span><br><span class="line">	  &#x2F;&#x2F; 如果需要第一次不执行函数</span><br><span class="line">	  &#x2F;&#x2F; 就将上次时间戳设为当前的</span><br><span class="line">      &#x2F;&#x2F; 这样在接下来计算 remaining 的值时会大于0</span><br><span class="line">      if (!previous &amp;&amp; options.leading &#x3D;&#x3D;&#x3D; false) previous &#x3D; now;</span><br><span class="line">      &#x2F;&#x2F; 计算剩余时间</span><br><span class="line">      var remaining &#x3D; wait - (now - previous);</span><br><span class="line">      context &#x3D; this;</span><br><span class="line">      args &#x3D; arguments;</span><br><span class="line">      &#x2F;&#x2F; 如果当前调用已经大于上次调用时间 + wait</span><br><span class="line">      &#x2F;&#x2F; 或者用户手动调了时间</span><br><span class="line"> 	  &#x2F;&#x2F; 如果设置了 trailing，只会进入这个条件</span><br><span class="line">	  &#x2F;&#x2F; 如果没有设置 leading，那么第一次会进入这个条件</span><br><span class="line">	  &#x2F;&#x2F; 还有一点，你可能会觉得开启了定时器那么应该不会进入这个 if 条件了</span><br><span class="line">	  &#x2F;&#x2F; 其实还是会进入的，因为定时器的延时</span><br><span class="line">	  &#x2F;&#x2F; 并不是准确的时间，很可能你设置了2秒</span><br><span class="line">	  &#x2F;&#x2F; 但是他需要2.2秒才触发，这时候就会进入这个条件</span><br><span class="line">      if (remaining &lt;&#x3D; 0 || remaining &gt; wait) &#123;</span><br><span class="line">        &#x2F;&#x2F; 如果存在定时器就清理掉否则会调用二次回调</span><br><span class="line">        if (timeout) &#123;</span><br><span class="line">          clearTimeout(timeout);</span><br><span class="line">          timeout &#x3D; null;</span><br><span class="line">        &#125;</span><br><span class="line">        previous &#x3D; now;</span><br><span class="line">        result &#x3D; func.apply(context, args);</span><br><span class="line">        if (!timeout) context &#x3D; args &#x3D; null;</span><br><span class="line">      &#125; else if (!timeout &amp;&amp; options.trailing !&#x3D;&#x3D; false) &#123;</span><br><span class="line">        &#x2F;&#x2F; 判断是否设置了定时器和 trailing</span><br><span class="line">	    &#x2F;&#x2F; 没有的话就开启一个定时器</span><br><span class="line">        &#x2F;&#x2F; 并且不能不能同时设置 leading 和 trailing</span><br><span class="line">        timeout &#x3D; setTimeout(later, remaining);</span><br><span class="line">      &#125;</span><br><span class="line">      return result;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-Module/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-Module/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 模块化</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 08:41:00 / 修改时间：08:41:16" itemprop="dateCreated datePublished" datetime="2020-01-03T08:41:00+08:00">2020-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><p>在有 <code>Babel</code> 的情况下，我们可以直接使用 <code>ES6</code> 的模块化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; file a.js</span><br><span class="line">export function a() &#123;&#125;</span><br><span class="line">export function b() &#123;&#125;</span><br><span class="line">&#x2F;&#x2F; file b.js</span><br><span class="line">export default function() &#123;&#125;</span><br><span class="line"></span><br><span class="line">import &#123;a, b&#125; from &#39;.&#x2F;a.js&#39;</span><br><span class="line">import XXX from &#39;.&#x2F;b.js&#39;</span><br></pre></td></tr></table></figure>
+<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a><code>CommonJS</code></h2><p><code>CommonJs</code> 是 <code>Node</code> 独有的规范，浏览器中使用就需要用到 <code>Browserify</code> 解析了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; a.js</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    a: 1</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; or</span><br><span class="line">exports.a &#x3D; 1</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; b.js</span><br><span class="line">var module &#x3D; require(&#39;.&#x2F;a.js&#39;)</span><br><span class="line">module.a &#x2F;&#x2F; -&gt; log 1</span><br></pre></td></tr></table></figure>
+<p>在上述代码中， <code>module.exports</code> 和 <code>exports</code> 很容易混淆，让我们来看看大致内部实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">var module &#x3D; require(&#39;.&#x2F;a.js&#39;)</span><br><span class="line">module.a</span><br><span class="line">&#x2F;&#x2F; 这里其实就是包装了一层立即执行函数，这样就不会污染全局变量了，</span><br><span class="line">&#x2F;&#x2F; 重要的是 module 这里，module 是 Node 独有的一个变量</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    a: 1</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 基本实现</span><br><span class="line">var module &#x3D; &#123;</span><br><span class="line">  exports: &#123;&#125; &#x2F;&#x2F; exports 就是个空对象</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 这个是为什么 exports 和 module.exports 用法相似的原因</span><br><span class="line">var exports &#x3D; module.exports</span><br><span class="line">var load &#x3D; function (module) &#123;</span><br><span class="line">    &#x2F;&#x2F; 导出的东西</span><br><span class="line">    var a &#x3D; 1</span><br><span class="line">    module.exports &#x3D; a</span><br><span class="line">    return module.exports</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>再来说说 module.exports 和 exports，用法其实是相似的，但是不能对 exports 直接赋值，不会有任何效果。</p>
+<p>对于 CommonJS 和 ES6 中的模块化的两者区别是：</p>
+<ul>
+<li>前者支持动态导入，也就是 require(${path}/xx.js)，后者目前不支持，但是已有提案</li>
+<li>前者是同步导入，因为用于服务端，文件都在本地，同步导入即使卡住主线程影响也不大。而后者是异步导入，因为用于浏览器，需要下载文件，如果也采用同步导入会对渲染有很大影响</li>
+<li>前者在导出时都是值拷贝，就算导出的值变了，导入的值也不会改变，所以如果想更新值，必须重新导入一次。但是后者采用实时绑定的方式，导入导出的值都指向同一个内存地址，所以导入值会跟随导出值变化</li>
+<li>后者会编译成 require/exports 来执行的</li>
+</ul>
+<h2 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h2><p>AMD 是由 <code>RequireJS</code> 提出的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; AMD</span><br><span class="line">define([&#39;.&#x2F;a&#39;, &#39;.&#x2F;b&#39;], function(a, b) &#123;</span><br><span class="line">    a.do()</span><br><span class="line">    b.do()</span><br><span class="line">&#125;)</span><br><span class="line">define(function(require, exports, module) &#123;</span><br><span class="line">    var a &#x3D; require(&#39;.&#x2F;a&#39;)</span><br><span class="line">    a.doSomething()</span><br><span class="line">    var b &#x3D; require(&#39;.&#x2F;b&#39;)</span><br><span class="line">    b.doSomething()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/03/FE-guide-copy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/FE-guide-copy/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 深浅拷贝</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-03 08:05:00" itemprop="dateCreated datePublished" datetime="2020-01-03T08:05:00+08:00">2020-01-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-05 10:08:18" itemprop="dateModified" datetime="2020-01-05T10:08:18+08:00">2020-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: 1</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; a</span><br><span class="line">a.age &#x3D; 2</span><br><span class="line">console.log(b.age) &#x2F;&#x2F; 2</span><br></pre></td></tr></table></figure>
+<p>从上述例子中我们可以发现，如果给一个变量赋值一个对象，那么两者的值会是同一个引用，其中一方改变，另一方也会相应改变。</p>
+<p>通常在开发中我们不希望出现这样的问题，我们可以使用浅拷贝来解决这个问题。</p>
+<h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p>首先可以通过 <code>Object.assign</code> 来解决这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: 1</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; Object.assign(&#123;&#125;, a)</span><br><span class="line">a.age &#x3D; 2</span><br><span class="line">console.log(b.age) &#x2F;&#x2F; 1</span><br></pre></td></tr></table></figure>
+<p>当然我们也可以通过展开运算符（…）来解决</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: 1</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; &#123;...a&#125;</span><br><span class="line">a.age &#x3D; 2</span><br><span class="line">console.log(b.age) &#x2F;&#x2F; 1</span><br></pre></td></tr></table></figure>
+<p>我们还可以用很多简单的方法都能实现浅拷贝：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">arr.slice();</span><br><span class="line">arr.concat();</span><br></pre></td></tr></table></figure>
+
+
+<p>通常浅拷贝就能解决大部分问题了，但是当我们遇到如下情况就需要使用到深拷贝了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: 1,</span><br><span class="line">    jobs: &#123;</span><br><span class="line">        first: &#39;FE&#39;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; &#123;...a&#125;</span><br><span class="line">a.jobs.first &#x3D; &#39;native&#39;</span><br><span class="line">console.log(b.jobs.first) &#x2F;&#x2F; native</span><br></pre></td></tr></table></figure>
+<p>浅拷贝只解决了第一层的问题，如果接下去的值中还有对象的话，那么就又回到刚开始的话题了，两者享有相同的引用。要解决这个问题，我们需要引入深拷贝。</p>
+<h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><p>这个问题通常可以通过 <code>JSON.parse(JSON.stringify(object))</code> 来解决，这也是最好用最简单的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: 1,</span><br><span class="line">    jobs: &#123;</span><br><span class="line">        first: &#39;FE&#39;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; JSON.parse(JSON.stringify(a))</span><br><span class="line">a.jobs.first &#x3D; &#39;native&#39;</span><br><span class="line">console.log(b.jobs.first) &#x2F;&#x2F; FE</span><br></pre></td></tr></table></figure>
+<p>但是该方法也是有局限性的：</p>
+<ul>
+<li>会忽略 undefined</li>
+<li>会忽略 symbol</li>
+<li>不能序列化函数</li>
+<li>不能解决循环引用的对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let obj &#x3D; &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: &#123;</span><br><span class="line">    c: 2,</span><br><span class="line">    d: 3,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">obj.c &#x3D; obj.b</span><br><span class="line">obj.e &#x3D; obj.a</span><br><span class="line">obj.b.c &#x3D; obj.c</span><br><span class="line">obj.b.d &#x3D; obj.b</span><br><span class="line">obj.b.e &#x3D; obj.b.c</span><br><span class="line">let newObj &#x3D; JSON.parse(JSON.stringify(obj))</span><br><span class="line">console.log(newObj)</span><br></pre></td></tr></table></figure>
+<p>如果你有这么一个循环引用对象，你会发现你不能通过该方法深拷贝<br>在遇到函数、 undefined 或者 symbol 的时候，该对象也不能正常的序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">let a &#x3D; &#123;</span><br><span class="line">    age: undefined,</span><br><span class="line">    sex: Symbol(&#39;fmale&#39;),</span><br><span class="line">    jobs: function() &#123;&#125;,</span><br><span class="line">    name: &#39;lixuguang&#39;</span><br><span class="line">&#125;</span><br><span class="line">let b &#x3D; JSON.parse(JSON.stringify(a))</span><br><span class="line">console.log(b) &#x2F;&#x2F; &#123;name: &quot;lixuang&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>你会发现在上述情况中，该方法会忽略掉函数和 undefined 。</p>
+<p>但是在通常情况下，复杂数据都是可以序列化的，所以这个函数可以解决大部分问题，并且该函数是内置函数中处理深拷贝性能最快的。当然如果你的数据中含有以上三种情况下，可以使用 lodash 的深拷贝函数。</p>
+<p>如果你所需拷贝的对象含有内置类型并且不包含函数，可以使用 MessageChannel</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function structuralClone(obj) &#123;</span><br><span class="line">  return new Promise(resolve &#x3D;&gt; &#123;</span><br><span class="line">    const &#123;port1, port2&#125; &#x3D; new MessageChannel();</span><br><span class="line">    port2.onmessage &#x3D; ev &#x3D;&gt; resolve(ev.data);</span><br><span class="line">    port1.postMessage(obj);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var obj &#x3D; &#123;a: 1, b: &#123;</span><br><span class="line">    c: b</span><br><span class="line">&#125;&#125;</span><br><span class="line">&#x2F;&#x2F; 注意该方法是异步的</span><br><span class="line">&#x2F;&#x2F; 可以处理 undefined 和循环引用对象</span><br><span class="line">(async () &#x3D;&gt; &#123;</span><br><span class="line">  const clone &#x3D; await structuralClone(obj)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>深拷贝实现方式2，可以深拷贝 <code>function</code> 、<code>symbol</code>，等等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">const mapTag &#x3D; &#39;[object Map]&#39;;</span><br><span class="line">const setTag &#x3D; &#39;[object Set]&#39;;</span><br><span class="line">const arrayTag &#x3D; &#39;[object Array]&#39;;</span><br><span class="line">const objectTag &#x3D; &#39;[object Object]&#39;;</span><br><span class="line">const argsTag &#x3D; &#39;[object Arguments]&#39;;</span><br><span class="line"></span><br><span class="line">const boolTag &#x3D; &#39;[object Boolean]&#39;;</span><br><span class="line">const dateTag &#x3D; &#39;[object Date]&#39;;</span><br><span class="line">const numberTag &#x3D; &#39;[object Number]&#39;;</span><br><span class="line">const stringTag &#x3D; &#39;[object String]&#39;;</span><br><span class="line">const symbolTag &#x3D; &#39;[object Symbol]&#39;;</span><br><span class="line">const errorTag &#x3D; &#39;[object Error]&#39;;</span><br><span class="line">const regexpTag &#x3D; &#39;[object RegExp]&#39;;</span><br><span class="line">const funcTag &#x3D; &#39;[object Function]&#39;;</span><br><span class="line"></span><br><span class="line">const deepTag &#x3D; [mapTag, setTag, arrayTag, objectTag, argsTag];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function forEach(array, iteratee) &#123;</span><br><span class="line">    let index &#x3D; -1;</span><br><span class="line">    const length &#x3D; array.length;</span><br><span class="line">    while (++index &lt; length) &#123;</span><br><span class="line">        iteratee(array[index], index);</span><br><span class="line">    &#125;</span><br><span class="line">    return array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function isObject(target) &#123;</span><br><span class="line">    const type &#x3D; typeof target;</span><br><span class="line">    return target !&#x3D;&#x3D; null &amp;&amp; (type &#x3D;&#x3D;&#x3D; &#39;object&#39; || type &#x3D;&#x3D;&#x3D; &#39;function&#39;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function getType(target) &#123;</span><br><span class="line">    return Object.prototype.toString.call(target);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function getInit(target) &#123;</span><br><span class="line">    const Ctor &#x3D; target.constructor;</span><br><span class="line">    return new Ctor();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function cloneSymbol(targe) &#123;</span><br><span class="line">    return Object(Symbol.prototype.valueOf.call(targe));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function cloneReg(targe) &#123;</span><br><span class="line">    const reFlags &#x3D; &#x2F;\w*$&#x2F;;</span><br><span class="line">    const result &#x3D; new targe.constructor(targe.source, reFlags.exec(targe));</span><br><span class="line">    result.lastIndex &#x3D; targe.lastIndex;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function cloneFunction(func) &#123;</span><br><span class="line">    const bodyReg &#x3D; &#x2F;(?&lt;&#x3D;&#123;)(.|\n)+(?&#x3D;&#125;)&#x2F;m;</span><br><span class="line">    const paramReg &#x3D; &#x2F;(?&lt;&#x3D;\().+(?&#x3D;\)\s+&#123;)&#x2F;;</span><br><span class="line">    const funcString &#x3D; func.toString();</span><br><span class="line">    if (func.prototype) &#123;</span><br><span class="line">        const param &#x3D; paramReg.exec(funcString);</span><br><span class="line">        const body &#x3D; bodyReg.exec(funcString);</span><br><span class="line">        if (body) &#123;</span><br><span class="line">            if (param) &#123;</span><br><span class="line">                const paramArr &#x3D; param[0].split(&#39;,&#39;);</span><br><span class="line">                return new Function(...paramArr, body[0]);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return new Function(body[0]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return eval(funcString);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function cloneOtherType(targe, type) &#123;</span><br><span class="line">    const Ctor &#x3D; targe.constructor;</span><br><span class="line">    switch (type) &#123;</span><br><span class="line">        case boolTag:</span><br><span class="line">        case numberTag:</span><br><span class="line">        case stringTag:</span><br><span class="line">        case errorTag:</span><br><span class="line">        case dateTag:</span><br><span class="line">            return new Ctor(targe);</span><br><span class="line">        case regexpTag:</span><br><span class="line">            return cloneReg(targe);</span><br><span class="line">        case symbolTag:</span><br><span class="line">            return cloneSymbol(targe);</span><br><span class="line">        case funcTag:</span><br><span class="line">            return cloneFunction(targe);</span><br><span class="line">        default:</span><br><span class="line">            return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function clone(target, map &#x3D; new WeakMap()) &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 克隆原始类型</span><br><span class="line">    if (!isObject(target)) &#123;</span><br><span class="line">        return target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 初始化</span><br><span class="line">    const type &#x3D; getType(target);</span><br><span class="line">    let cloneTarget;</span><br><span class="line">    if (deepTag.includes(type)) &#123;</span><br><span class="line">        cloneTarget &#x3D; getInit(target, type);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return cloneOtherType(target, type);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 防止循环引用</span><br><span class="line">    if (map.get(target)) &#123;</span><br><span class="line">        return target;</span><br><span class="line">    &#125;</span><br><span class="line">    map.set(target, cloneTarget);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 克隆set</span><br><span class="line">    if (type &#x3D;&#x3D;&#x3D; setTag) &#123;</span><br><span class="line">        target.forEach(value &#x3D;&gt; &#123;</span><br><span class="line">            cloneTarget.add(clone(value));</span><br><span class="line">        &#125;);</span><br><span class="line">        return cloneTarget;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 克隆map</span><br><span class="line">    if (type &#x3D;&#x3D;&#x3D; mapTag) &#123;</span><br><span class="line">        target.forEach((value, key) &#x3D;&gt; &#123;</span><br><span class="line">            cloneTarget.set(key, clone(value));</span><br><span class="line">        &#125;);</span><br><span class="line">        return cloneTarget;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 克隆对象和数组</span><br><span class="line">    const keys &#x3D; type &#x3D;&#x3D;&#x3D; arrayTag ? undefined : Object.keys(target);</span><br><span class="line">    forEach(keys || target, (value, key) &#x3D;&gt; &#123;</span><br><span class="line">        if (keys) &#123;</span><br><span class="line">            key &#x3D; value;</span><br><span class="line">        &#125;</span><br><span class="line">        cloneTarget[key] &#x3D; clone(target[key], map);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    return cloneTarget;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 调用方法</span><br><span class="line">clone(target);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/02/FE-guide-Closure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/02/FE-guide-Closure/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 闭包</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-02 21:32:22 / 修改时间：21:32:38" itemprop="dateCreated datePublished" datetime="2020-01-02T21:32:22+08:00">2020-01-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="闭包Closure"><a href="#闭包Closure" class="headerlink" title="闭包Closure"></a>闭包<code>Closure</code></h1><p>闭包的定义很简单：函数 <code>A</code> 返回了一个函数 <code>B</code> ，并且函数 <code>B</code> 中使用了函数 <code>A</code> 的变量，函数 <code>B</code> 就被称为闭包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function A() &#123;</span><br><span class="line">  let a &#x3D; 1</span><br><span class="line">  function B() &#123;</span><br><span class="line">      console.log(a)</span><br><span class="line">  &#125;</span><br><span class="line">  return B</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>你是否会疑惑，为什么函数 <code>A</code> 已经弹出调用栈了，为什么函数 <code>B</code> 还能引用到函数 <code>A</code> 中的变量。因为函数 <code>A</code> 中的变量这时候是存储在堆上的。现在的 <code>JS</code> 引擎可以通过<strong><em>逃逸分析</em></strong>辨别出哪些变量需要存储在堆上，哪些需要存储在栈上。</p>
+<p>经典面试题，循环中使用闭包解决 <code>var</code> 定义函数的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">for ( var i&#x3D;1; i&lt;&#x3D;5; i++) &#123;</span><br><span class="line">	setTimeout( function timer() &#123;</span><br><span class="line">		console.log( i );</span><br><span class="line">	&#125;, i*1000 );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先因为 <code>setTimeout</code> 是个异步函数，所有会先把循环全部执行完毕，这时候 <code>i</code> 就是 6 了，所以会输出一堆 6。</p>
+<p>解决办法两种，第一种使用闭包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">for (var i &#x3D; 1; i &lt;&#x3D; 5; i++) &#123;</span><br><span class="line">  (function(j) &#123;</span><br><span class="line">    setTimeout(function timer() &#123;</span><br><span class="line">      console.log(j);</span><br><span class="line">    &#125;, j * 1000);</span><br><span class="line">  &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二种就是使用 <code>setTimeout</code> 的第三个参数(附加参数，传给 <code>setTimeout</code> 中的函数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">for ( var i&#x3D;1; i&lt;&#x3D;5; i++) &#123;</span><br><span class="line">	setTimeout( function timer(j) &#123;</span><br><span class="line">		console.log( j );</span><br><span class="line">	&#125;, i*1000, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三种就是使用 <code>let</code> 定义 <code>i</code> 了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">for ( let i&#x3D;1; i&lt;&#x3D;5; i++) &#123;</span><br><span class="line">	setTimeout( function timer() &#123;</span><br><span class="line">		console.log( i );</span><br><span class="line">	&#125;, i*1000 );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为对于 <code>let</code> 来说，他会创建一个块级作用域，相当于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">&#123; &#x2F;&#x2F; 形成块级作用域</span><br><span class="line">  let i &#x3D; 0</span><br><span class="line">  &#123;</span><br><span class="line">    let ii &#x3D; i</span><br><span class="line">    setTimeout( function timer() &#123;</span><br><span class="line">        console.log( ii );</span><br><span class="line">    &#125;, i*1000 );</span><br><span class="line">  &#125;</span><br><span class="line">  i++</span><br><span class="line">  &#123;</span><br><span class="line">    let ii &#x3D; i</span><br><span class="line">  &#125;</span><br><span class="line">  i++</span><br><span class="line">  &#123;</span><br><span class="line">    let ii &#x3D; i</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/02/FE-guide-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/02/FE-guide-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- 执行上下文</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-02 21:18:22 / 修改时间：21:17:14" itemprop="dateCreated datePublished" datetime="2020-01-02T21:18:22+08:00">2020-01-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h1><p>当执行 <code>JS</code> 代码时，会产生三种执行上下文</p>
+<ul>
+<li>全局执行上下文</li>
+<li>函数执行上下文</li>
+<li><code>eval</code> 执行上下文</li>
+</ul>
+<p>每个执行上下文中都有三个重要的属性</p>
+<ul>
+<li>变量对象（ <code>VO</code> ），包含变量、函数声明和函数的形参，该属性只能在全局上下文中访问</li>
+<li>作用域链（ <code>JS</code> 采用<strong><em>词法作用域</em></strong>，也就是说变量的作用域是在定义时就决定了）</li>
+<li>this<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">var a &#x3D; 10</span><br><span class="line">function foo(i) &#123;</span><br><span class="line">  var b &#x3D; 20</span><br><span class="line">&#125;</span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+对于上述代码，执行栈中有两个上下文：全局上下文和函数 <code>foo</code> 上下文。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">stack &#x3D; [</span><br><span class="line">    globalContext,</span><br><span class="line">    fooContext</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+对于全局上下文来说， <code>VO</code> 大概是这样的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">globalContext.VO &#x3D;&#x3D;&#x3D; globe</span><br><span class="line">globalContext.VO &#x3D; &#123;</span><br><span class="line">    a: undefined,</span><br><span class="line">	foo: &lt;Function&gt;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+对于函数 <code>foo</code> 来说， <code>VO</code> 不能访问，只能访问到活动对象（ <code>AO</code> ）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">fooContext.VO &#x3D;&#x3D;&#x3D; foo.AO</span><br><span class="line">fooContext.AO &#123;</span><br><span class="line">    i: undefined,</span><br><span class="line">	b: undefined,</span><br><span class="line">    arguments: &lt;&gt;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; arguments 是函数独有的对象(箭头函数没有)</span><br><span class="line">&#x2F;&#x2F; 该对象是一个伪数组，有 &#96;length&#96; 属性且可以通过下标访问元素</span><br><span class="line">&#x2F;&#x2F; 该对象中的 &#96;callee&#96; 属性代表函数本身</span><br><span class="line">&#x2F;&#x2F; &#96;caller&#96; 属性代表函数的调用者</span><br></pre></td></tr></table></figure>
+对于作用域链，可以把它理解成包含自身变量对象和上级变量对象的列表，通过 <code>[[Scope]]</code> 属性查找上级变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">fooContext.[[Scope]] &#x3D; [</span><br><span class="line">    globalContext.VO</span><br><span class="line">]</span><br><span class="line">fooContext.Scope &#x3D; fooContext.[[Scope]] + fooContext.VO</span><br><span class="line">fooContext.Scope &#x3D; [</span><br><span class="line">    fooContext.VO,</span><br><span class="line">    globalContext.VO</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+接下来让我们看一个老生常谈的例子， <code>var</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">b() &#x2F;&#x2F; call b</span><br><span class="line">console.log(a) &#x2F;&#x2F; undefined</span><br><span class="line"></span><br><span class="line">var a &#x3D; &#39;Hello world&#39;</span><br><span class="line"></span><br><span class="line">function b() &#123;</span><br><span class="line">	console.log(&#39;call b&#39;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+想必以上的输出大家肯定都已经明白了，这是因为函数和变量提升的原因。通常提升的解释是说将声明的代码移动到了顶部，这其实没有什么错误，便于大家理解。但是更准确的解释应该是：在生成执行上下文时，会有两个阶段。第一个阶段是创建的阶段（具体步骤是创建 <code>VO</code> ）， <code>JS</code> 解释器会找出需要提升的变量和函数，并且给他们提前在内存中开辟好空间，函数的话会将整个函数存入内存中，变量只声明并且赋值为 <code>undefined</code> ，所以在第二个阶段，也就是代码执行阶段，我们可以直接提前使用。</li>
+</ul>
+<p>在提升的过程中，相同的函数会覆盖上一个函数，并且函数优先于变量提升</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">b() &#x2F;&#x2F; call b second</span><br><span class="line"></span><br><span class="line">function b() &#123;</span><br><span class="line">	console.log(&#39;call b fist&#39;)</span><br><span class="line">&#125;</span><br><span class="line">function b() &#123;</span><br><span class="line">	console.log(&#39;call b second&#39;)</span><br><span class="line">&#125;</span><br><span class="line">var b &#x3D; &#39;Hello world&#39;</span><br></pre></td></tr></table></figure>
+<p><code>var</code> 会产生很多错误，所以在 <code>ES6</code> 中引入了 <code>let</code> 。 <code>let</code> 不能在声明前使用，但是这并不是常说的 <code>let</code> 不会提升， <code>let</code> 提升了声明但没有赋值，因为临时死区导致了并不能在声明前使用。</p>
+<p>对于非匿名的立即执行函数需要注意以下一点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">var foo &#x3D; 1</span><br><span class="line">(function foo() &#123;</span><br><span class="line">    foo &#x3D; 10</span><br><span class="line">    console.log(foo)</span><br><span class="line">&#125;()) &#x2F;&#x2F; -&gt; ƒ foo() &#123; foo &#x3D; 10 ; console.log(foo) &#125;</span><br></pre></td></tr></table></figure>
+<p>因为当 <code>JS</code> 解释器在遇到非匿名的立即执行函数时，会创建一个辅助的特定对象，然后将函数名称作为这个对象的属性，因此函数内部才可以访问到 <code>foo</code> ，但是这个值又是只读的，所以对它的赋值并不生效，所以打印的结果还是这个函数，并且外部的值也没有发生更改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">specialObject &#x3D; &#123;&#125;;</span><br><span class="line"></span><br><span class="line">Scope &#x3D; specialObject + Scope;</span><br><span class="line"></span><br><span class="line">foo &#x3D; new FunctionExpression;</span><br><span class="line">foo.[[Scope]] &#x3D; Scope;</span><br><span class="line">specialObject.foo &#x3D; foo; &#x2F;&#x2F; &#123;DontDelete&#125;, &#123;ReadOnly&#125;</span><br><span class="line"></span><br><span class="line">delete Scope[0]; &#x2F;&#x2F; remove specialObject from the front of scope chain</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/02/FE-guide-this/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/02/FE-guide-this/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- this</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-02 20:59:22 / 修改时间：21:01:48" itemprop="dateCreated datePublished" datetime="2020-01-02T20:59:22+08:00">2020-01-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a><code>this</code></h1><p>this 是很多人会混淆的概念，但是其实他一点都不难，你只需要记住几个规则就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function foo() &#123;</span><br><span class="line">	console.log(this.a)</span><br><span class="line">&#125;</span><br><span class="line">var a &#x3D; 1</span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line">var obj &#x3D; &#123;</span><br><span class="line">	a: 2,</span><br><span class="line">	foo: foo</span><br><span class="line">&#125;</span><br><span class="line">obj.foo()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 以上两者情况 &#96;this&#96; 只依赖于调用函数前的对象，优先级是第二个情况大于第一个情况</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 以下情况是优先级最高的，&#96;this&#96; 只会绑定在 &#96;c&#96; 上，不会被任何方式修改 &#96;this&#96; 指向</span><br><span class="line">var c &#x3D; new foo()</span><br><span class="line">c.a &#x3D; 3</span><br><span class="line">console.log(c.a)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 还有种就是利用 &#96;call&#96; ， &#96;apply&#96; ， &#96;bind&#96; 改变 &#96;this&#96; ，这个优先级仅次于 &#96;new&#96;</span><br></pre></td></tr></table></figure>
+<p>以上几种情况明白了，很多代码中的 <code>this</code> 应该就没什么问题了，下面让我们看看箭头函数中的 <code>this</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function a() &#123;</span><br><span class="line">    return () &#x3D;&gt; &#123;</span><br><span class="line">        return () &#x3D;&gt; &#123;</span><br><span class="line">        	console.log(this)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a()()())</span><br></pre></td></tr></table></figure>
+<p>箭头函数其实是没有 <code>this</code> 的，这个函数中的 <code>this</code> 只取决于他外面的第一个不是箭头函数的函数的 <code>this</code> 。在这个例子中，因为调用 <code>a</code> 符合前面代码中的第一个情况，所以 <code>this</code> 是 <code>window。并且</code> this 一旦绑定了上下文，就不会被任何代码改变。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lixuguang.github.io/2020/01/02/FE-guide-instanceof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="李旭光">
+      <meta itemprop="description" content="学习 | 生活 | 一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李旭光的技术博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/02/FE-guide-instanceof/" class="post-title-link" itemprop="url">前端常见知识点整理 ---- instanceof</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-02 20:29:22" itemprop="dateCreated datePublished" datetime="2020-01-02T20:29:22+08:00">2020-01-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-13 14:19:36" itemprop="dateModified" datetime="2020-01-13T14:19:36+08:00">2020-01-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：李旭光<br>引用请标明出处</p>
+</blockquote>
+<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a><code>instanceof</code></h1><p><code>instanceof</code> 可以正确的判断对象的类型，因为内部机制是通过判断对象的原型链中是不是能找到类型的 <code>prototype</code>。<br>举例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js代码</span></span><br><span class="line"></span><br><span class="line">a <span class="keyword">instanceof</span> <span class="built_in">Object</span></span><br></pre></td></tr></table></figure>
+<p>判断 <code>Object</code> 的 <code>prototype</code> 是否在 <code>a</code> 的原型链上。</p>
+<p>我们也可以试着实现一下 <code>instanceof</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js代码</span><br><span class="line"></span><br><span class="line">function instanceof(left, right) &#123;</span><br><span class="line">    let prototype &#x3D; right.prototype &#x2F;&#x2F; 获得类型的原型</span><br><span class="line">    left &#x3D; left.__proto__ &#x2F;&#x2F; 获得对象的原型</span><br><span class="line">    while (true) &#123; &#x2F;&#x2F; 判断对象的类型是否等于类型的原型</span><br><span class="line">    	if (left &#x3D;&#x3D;&#x3D; null)</span><br><span class="line">    		return false</span><br><span class="line">    	if (prototype &#x3D;&#x3D;&#x3D; left)</span><br><span class="line">    		return true</span><br><span class="line">    	left &#x3D; left.__proto__</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李旭光"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">李旭光</p>
+  <div class="site-description" itemprop="description">学习 | 生活 | 一切</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lixuguang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lixuguang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lixuguang316@gmail.com" title="E-Mail → mailto:lixuguang316@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://he8hepeng.github.io/" title="http:&#x2F;&#x2F;he8hepeng.github.io" rel="noopener" target="_blank">何鹏</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李旭光</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
