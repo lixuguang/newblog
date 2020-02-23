@@ -17,13 +17,14 @@ tags:
 defineProperty 其实是定义对象属性用的
 > defineProperty 其实并不是核心的为一个对象做数据双向绑定，而是去给对象做属性标签，只不过是属性里 get 和 set 实现了响应式。
 
-属性名|默认值
-value|undefined
-get|undefined
-set|undefined
-writable|false
-enumerable|false
-configurable|false
+| 属性名       | 默认值    |
+| ------------ | --------- |
+| value        | undefined |
+| get          | undefined |
+| set          | undefined |
+| writable     | false     |
+| enumerable   | false     |
+| configurable | false     |
 
 ``` js
 var ob = {
