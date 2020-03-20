@@ -4,10 +4,7 @@ date: 2020-01-13 14:50:21
 categories: 
 	- 博客技巧
 tags: 
-	- blog
-    - hexo 
-    - next 
-    - search 
+	- Hexo
 ---
 > 作者：李旭光
 > 引用请标明出处
