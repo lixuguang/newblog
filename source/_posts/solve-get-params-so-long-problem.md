@@ -2,7 +2,7 @@
 title: 解决get请求过长的问题小记
 date: 2020-01-09 11:22:22
 categories: 
-	- 前端问题集
+	- 前端问题
 tags: 
 	- ajax
 	- get
