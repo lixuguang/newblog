@@ -2,7 +2,7 @@
 title: 使用阿里镜像加速brew（转载）
 date: 2020-03-03 22:00:00
 categories: 
-	- 软件使用
+	- 海外提速
 tags:
 	- HomeBrew
 	- Mac
