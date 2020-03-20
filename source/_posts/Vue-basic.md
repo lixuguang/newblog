@@ -2,6 +2,7 @@
 title: Vue基础
 date: 2017-08-30 17:03:05
 categories: 
+  - 前端框架
 	- VUE
 tags: 
 	- VUE
