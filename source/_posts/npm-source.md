@@ -3,6 +3,7 @@ title: npm相关资料
 date: 2017-08-30 12:24:49
 categories: 
 	- Nodejs
+	- Npm
 tags:
 	- npm
 	- node
