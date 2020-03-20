@@ -2,7 +2,7 @@
 title: 给我的Hexo博客添加文章内容搜索功能
 date: 2020-01-13 14:50:21
 categories: 
-	- 前端技术
+	- 博客技巧
 tags: 
 	- blog
     - hexo 
