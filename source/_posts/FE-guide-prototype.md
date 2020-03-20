@@ -14,7 +14,7 @@ tags:
 
 # 原型
 ![yuanxing.png](https://i.loli.net/2020/01/02/7ov8I4YDiBkjJyr.png)
-每个***函数***都有 `prototype` 属性，除了 `Function.prototype.bind()`，该属性指向`原型`。
+每个***函数***都有 `prototype` 属性，除了 `Function.prototype.bind()`，该属性指向`原型对象`，简称`原型`，prototype原型对象里的constructor指向构造函数本身。
 每个***对象***都有 `__proto__` 属性，指向了创建该对象的***构造函数的原型***。其实这个属性指向了 `[[prototype]]`，但是 `[[prototype]]` 是内部属性，我们并不能访问到，所以使用 `_proto_` 来访问。
 对象可以通过 `__proto__` 来寻找不属于该对象的属性，`__proto__` 将对象连接起来组成了`原型链`。
 
