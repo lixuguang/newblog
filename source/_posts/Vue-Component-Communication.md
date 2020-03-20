@@ -2,9 +2,11 @@
 title: 前端面试Vue篇：Vue组件通信的几种方式
 date: 2019-12-27 22:22:22
 categories: 
-	- Vue基础
+    - 前端框架
+      - Vue
 tags: 
-	- vue
+    - vue
+    - Vue基础
 	- 面试
 	- 组件通信
 ---
