@@ -143,3 +143,6 @@ console.log(person.name); // Kevin
 ## 关联阅读
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 [说说原型（prototype）、原型链和原型继承](https://zhuanlan.zhihu.com/p/35790971)
+
+## 扩展阅读
+[继承](https://lixuguang.github.io/2020/01/13/FE-guide-inherit2/)
