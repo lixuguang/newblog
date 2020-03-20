@@ -2,7 +2,8 @@
 title: vue插件开发（笔记）
 date: 2020-02-24 22:00:00
 categories: 
-	- vue
+	- 前端框架
+	- VUE
 tags:
 	- 插件
 ---

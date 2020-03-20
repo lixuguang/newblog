@@ -2,7 +2,7 @@
 title: webpack中loader和plugin之间的区别
 date: 2020-01-22 18:38:00
 categories: 
-	- 前端技术
+	- 前端工程化
 	- Webpack
 tags: 
 	- 面试
