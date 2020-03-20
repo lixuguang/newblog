@@ -3,8 +3,6 @@ title: 重拾java开发技能
 date: 2019-12-30 21:37:07
 categories: 
 	- 杂记随感
-tags: 
-	- java
 ---
 > 作者：李旭光
 > 引用请标明出处
