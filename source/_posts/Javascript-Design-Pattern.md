@@ -5,8 +5,6 @@ categories:
 	- 前端技术
 tags: 
 	- 设计模式
-	- Design Pattern
-	- 套路
 ---
 > 作者：李旭光
 > 引用请标明出处
