@@ -3,8 +3,6 @@ title: 《高性能JAVASCRIPT》读书笔记
 date: 2013-06-17 22:22:22
 categories: 
 	- 读书笔记
-tags: 
-	- JavaScript
 ---
 > 作者：李旭光
 > 引用请标明出处
