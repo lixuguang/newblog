@@ -3,6 +3,7 @@ title: VSCode ESLint JS代码静态检测工具
 date: 2017-10-12 14:42:52
 categories: 
 	- 效率工具
+	- VSCode插件
 tags: 
 	- VSCode
 ---
