@@ -4,10 +4,7 @@ date: 2017-10-12 10:50:21
 categories: 
 	- 前端技术
 tags: 
-	- blog
-    - hexo 
-    - next 
-    - npm 
+	- Hexo
 ---
 > 作者：李旭光
 > 引用请标明出处
