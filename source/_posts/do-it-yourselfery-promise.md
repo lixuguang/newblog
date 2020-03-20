@@ -2,8 +2,8 @@
 title: 自己动手实现系列 ---- promise
 date: 2020-01-13 08:40:22
 categories: 
+	- 源码原理
 	- 自己动手实现系列
-	- 前端技术
 tags: 
 	- promise
 ---
