@@ -127,5 +127,17 @@ let a = { b: 1 } // 这个字面量内部也是使用了 new Object()
 - 对象的 `__proto__` 指向原型， `__proto__` 将对象和原型连接起来组成了原型链
 ![总结](https://img2018.cnblogs.com/blog/1731684/201907/1731684-20190704181143591-516719297.png)
 
+## 归纳
+`ES` 把对象定义为：“无序属性的集合，其属性可以包含基本值，对象和函数”。
+严格来讲，这就相当于说对象是一组没有特定顺序的值。ES 中的构造函数可以用来创建特定类型的对象，用来在创建对象时初始化对象。它的特点是，一般为大写字母开头，使用 `new` 操作符来实例化对象，比如：
+
+``` js
+function Person() {}
+var person = new Person();
+person.name = "Kevin";
+console.log(person.name); // Kevin
+```
+
+`Person` 就是构造函数， `person` 就是对象。对于对象而言，每个 `JS` 对象一定对应一个原型对象，并从原型对象继承属性和方法。对象 `__proto__` 属性的值就是它所对应的原型对象。对象的 `__proto__` 指向自己构造函数的 `prototype` 。所以对象的原型链就是 `obj.__proto__.proto__....` 。对于函数而言，只有函数才有 `prototype` 属性， `Person.prototype`  是一个对象，并且有两个属性， 一个是 `constructor` 指向其构造函数 `Person` ， 一个是 `__proto__`  属性：是一个对象，指向上一层的原型。原型链的尽头是 `Object.prototype` 。所有对象均从 `Object.prototype` 继承属性。`Function.prototype` 和 `Function.__proto__` 为同一对象。`Object/Array/String` 等等构造函数本质上和 `Function` 一样，均继承于 `Function.prototype` 。`Function.prototype` 直接继承 `Object.prototype` 。这里的 `Object` 和 `Function` 有点鸡和蛋的问题，总结：先有 `Object.prototype`（原型链顶端），`Function.prototype` 继承 `Object.prototype` `而产生，最后，Function` 和 `Object` 和其它构造函数继承 `Function.prototype` 而产生。属性查找时，先在对象自己上找，找不到才会一步步根据原型链往上找。
 ## 关联阅读
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
