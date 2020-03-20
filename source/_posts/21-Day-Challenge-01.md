@@ -2,7 +2,7 @@
 title: 2020年21天主题挑战之灵感篇-Day 1-写下自己期待中的生平
 date: 2020-01-02 12:24:49
 categories: 
-	- 个人成长
+	- 杂技随笔
 tags:
 	- 21天挑战
 	- 21 Day Challenge
