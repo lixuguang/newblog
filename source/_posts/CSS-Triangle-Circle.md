@@ -2,9 +2,9 @@
 title: CSS border三角、圆角图形生成技术详解
 date: 2013-06-26 22:22:22
 categories: 
-	- CSS技巧
-tags: 
 	- CSS
+tags: 
+	- CSS技巧
 ---
 > 作者：李旭光
 > 引用请标明出处
