@@ -94,7 +94,7 @@ function Foo() {} // function 就是个语法糖,内部等同于 new Function()
 let a = { b: 1 } // 这个字面量内部也是使用了 new Object()
 ```
 
-## Function.proto === Function.prototype
+## Function.__proto__ === Function.prototype
 对于对象来说，`xx.__proto__.contrcutor` 是该对象的构造函数，但是在图中我们可以发现 `Function.__proto__` === `Function.prototype`，难道这代表着 `Function` 自己产生了自己?
 
 答案肯定是否认的，要说明这个问题我们先从 `Object` 说起。
