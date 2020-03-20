@@ -30,8 +30,7 @@ let fun = Function.prototype.bind()
 
 ## `prototype` 如何产生的
 当我们声明一个函数时，这个属性就被自动创建了。
-```
-// js代码
+``` js
 
 function Foo() {}
 ```
@@ -53,9 +52,7 @@ function Foo() {}
 
 ### 实例对象的 `_proto_` 如何产生的
 从上图可知，当我们使用 `new` 操作符时，生成的实例对象拥有了 `_proto_` 属性。
-```
-// js代码
-
+``` js
 function Foo() {}
 // 这个函数是 Function 的实例对象
 // function 就是一个语法糖
@@ -70,9 +67,7 @@ function Foo() {}
 4. 返回新对象
 
 在调用 `new` 的过程中会发生以上四件事情，我们也可以试着来自己实现一个 `new`
-```
-// js代码
-
+``` js
 function create() {
 	let obj = new Object() // 创建一个空的对象
 	let Con = [].shift.call(arguments) // 获得构造函数
@@ -85,9 +80,7 @@ function create() {
 
 对于创建一个对象来说，更推荐使用字面量的方式创建对象。因为你使用 new Object() 的方式创建对象需要通过作用域链一层层找到 Object，但是你使用字面量的方式就没这个问题。
 
-```
-// js代码
-
+``` js
 function Foo() {} // function 就是个语法糖,内部等同于 new Function()
 let a = { b: 1 } // 这个字面量内部也是使用了 new Object()
 ```
