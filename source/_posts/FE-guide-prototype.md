@@ -126,3 +126,6 @@ let a = { b: 1 } // 这个字面量内部也是使用了 new Object()
 - 函数的 `prototype` 是一个对象，也就是原型
 - 对象的 `__proto__` 指向原型， `__proto__` 将对象和原型连接起来组成了原型链
 ![总结](https://img2018.cnblogs.com/blog/1731684/201907/1731684-20190704181143591-516719297.png)
+
+## 关联阅读
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
