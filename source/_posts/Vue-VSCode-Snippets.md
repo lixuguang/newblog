@@ -3,7 +3,7 @@ title: Vue VSCode Snippets 自动生成Vue代码片段的VSCode扩展
 date: 2017-08-30 16:23:17
 categories: 
 	- 效率工具
-		- VSCode插件
+	- VSCode插件
 tags: 
 	- VUE
 	- 插件
