@@ -68,13 +68,22 @@ function Foo() {}
 
 在调用 `new` 的过程中会发生以上四件事情，我们也可以试着来自己实现一个 `new`
 ``` js
+function Person( name ){ 
+ this.name = name; 
+}; 
+Person.prototype.getName = function(){ 
+ return this.name; 
+};
+
 function create() {
-	let obj = new Object() // 创建一个空的对象
-	let Con = [].shift.call(arguments) // 获得构造函数
-	obj.__proto__ = Con.prototype	// 链接到原型
-	let result = Con.apply(obj, arguments) // 绑定 this，执行构造函数
+	let obj = new Object() // 从 Object.prototype 上克隆一个空的对象
+	let Con = [].shift.call(arguments) // 获取外部传入的构造器，此例是 Person 
+	obj.__proto__ = Con.prototype	// 指向正确的原型,链接到原型
+	let result = Con.apply(obj, arguments) // 绑定 this，执行构造函数，借用外部传入的构造器给 obj 设置属性
 	return typeof result === 'object' ? result : obj // 确保 new 出来的是个对象
 }
+
+create(Person,'lixg')
 ```
 对于实例对象来说，都是通过 `new` 产生的，无论是 `function Foo()` 还是 `let a = { b : 1 }` 。
 
