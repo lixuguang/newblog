@@ -2,7 +2,7 @@
 title: 重拾java开发技能
 date: 2019-12-30 21:37:07
 categories: 
-	- 日常记录
+	- 杂记随感
 tags: 
 	- java
 ---
