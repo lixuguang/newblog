@@ -3,6 +3,7 @@ title: 前端常见知识点整理 ---- instanceof
 date: 2020-01-02 20:29:22
 categories: 
 	- 前端技术
+	- 前端常见知识点整理
 tags: 
 	- 面试
 	- 知识点

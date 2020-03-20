@@ -2,7 +2,8 @@
 title: 前端常见知识点整理 ---- call, apply, bind 区别
 date: 2020-01-03 10:19:00
 categories: 
-	- 前端技术
+  - 前端技术
+  - 前端常见知识点整理
 tags: 
 	- 面试
 	- 知识点

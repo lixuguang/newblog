@@ -2,7 +2,8 @@
 title: 前端常见知识点整理 ---- Map、FlatMap 和 Reduce
 date: 2020-01-03 11:35:00
 categories: 
-	- 前端技术
+  - 前端技术
+  - 前端常见知识点整理
 tags: 
 	- 面试
 	- 知识点
