@@ -2,7 +2,7 @@
 title: 介绍一个好用的doc展示库 ---- vuepress
 date: 2020-01-05 17:59:22
 categories: 
-	- 前端技术
+	- 效率工具
 tags: 
 	- 工具分享
 ---
