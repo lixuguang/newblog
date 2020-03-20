@@ -142,3 +142,4 @@ console.log(person.name); // Kevin
 [继承](https://pic2.zhimg.com/v2-2e8ec703287854d174483ba5f9f937cf_1200x500.jpg)
 ## 关联阅读
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+[说说原型（prototype）、原型链和原型继承](https://zhuanlan.zhihu.com/p/35790971)
