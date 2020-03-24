@@ -175,6 +175,22 @@ module.exports = {
     plugins:[new CleanWebpackPlugin()]
 }
 ```
+##### 希望dist目录下某个文件夹不被清空
+不过呢，有些时候，我们并不希望整个 dist 目录都被清空，比如，我们不希望，每次打包的时候，都删除 `dll` 目录，以及 `dll` 目录下的文件或子目录，该怎么办呢？
+
+`clean-webpack-plugin` 为我们提供了参数 `cleanOnceBeforeBuildPatterns` 。
+``` js
+//webpack.config.js
+module.exports = {
+    //...
+    plugins: [
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns:['**/*', '!dll', '!dll/**'] //不删除dll目录下的文件
+        })
+    ]
+}
+```
+
 ### 引用CSS
 我们的入口文件是 `js` ，所以我们在入口 `js` 中引入我们的 `css` 文件
 ``` js
@@ -209,7 +225,17 @@ module.exports = {
     }
 }
 ```
-浏览器打开 `html` 如下
+
+我们简单说一下上面的配置：
+- `style-loader` 动态创建 `style` 标签，将 `css` 插入到 `head` 中.
+- `css-loader` 负责处理 `@import` 等语句。
+- `postcss-loader` 和 `autoprefixer` ，自动生成浏览器兼容性前缀 —— 2020了，应该没人去自己徒手去写浏览器前缀了吧
+- `less-loader` 负责处理编译 `.less` 文件,将其转为 `css`
+
+> 注意：  
+`loader` 的执行顺序是***从右向左***执行的，也就是后面的 `loader` 先执行，上面 `loader` 的执行顺序为: `less-loader` ---> `postcss-loader` ---> `css-loader` ---> `style-loader`
+当然，`loader` 其实还有一个参数，可以修改优先级，`enforce` 参数，其值可以为: `pre`(优先执行) 或 `post` (滞后执行)。
+现在，我们已经可以处理 `.less` 文件啦，`.css` 文件只需要修改匹配规则，删除 `less-loader` 即可。
 
 #### 为css添加浏览器前缀
 ``` js
@@ -851,13 +877,18 @@ module.exports = WebpackMerge(webpackConfig,{
 
 优化配置对我们来说非常有实际意义，这实际关系到你打包出来文件的大小，打包的速度等。
 具体优化可以分为以下几点：
+
 ### 优化打包速度
 > 构建速度指的是我们每次修改代码后热更新的速度以及发布前打包文件的速度。
+
 #### 合理的配置 mode 参数与 devtool 参数
+
+[devtool 可设置的值](https://www.webpackjs.com/configuration/devtool/)
 `mode` 可设置 `development` `production` 两个参数
 
 如果没有设置， `webpack4` 会将 `mode` 的默认值设置为 `production`
-`production` 模式下会进行 `tree shaking` (去除无用代码)和 `uglifyjs` (代码压缩混淆)
+- `production` ：将 `process.env.NODE_ENV` 的值设置为 `production` ，启用 `FlagDependencyUsagePlugin`, `FlagIncludedChunksPlugin`, `ModuleConcatenationPlugin`, `NoEmitOnErrorsPlugin`, `OccurrenceOrderPlugin`, `SideEffectsFlagPlugin` 和 `UglifyJsPlugin`,会进行 `tree shaking` (去除无用代码)和 `uglifyjs` (代码压缩混淆)
+- `development` ：将 `process.env.NODE_ENV` 的值设置为 `development` ，启用 `NamedChunksPlugin` 和 `NamedModulesPlugin`
 
 #### 缩小文件的搜索范围(配置include exclude alias noParse extensions)
 - `alias`  当我们代码中出现 import 'vue'时， webpack会采用向上递归搜索的方式去node_modules 目录下找。为了减少搜索范围我们可以直接告诉webpack去哪个路径下查找。也就是别名(alias)的配置。
@@ -1201,3 +1232,4 @@ module.exports = {
 
 ## 更多阅读
 [webpack中文](https://webpack.docschina.org/)
+[4W字长文带你深度解锁Webpack系列(上)](https://mp.weixin.qq.com/s/OBUcxEFXKQQubP08LO2Uhg)
