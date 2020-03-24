@@ -14,9 +14,7 @@ tags:
 # async 和 await
 一个函数如果加上 `async` ，那么该函数就会返回一个 `Promise`
 
-```
-// js代码
-
+``` js
 async function test() {
   return "1";
 }
@@ -25,9 +23,7 @@ console.log(test()); // -> Promise {<resolved>: "1"}
 可以把 `async` 看成将函数返回值使用 `Promise.resolve()` 包裹了下。
 `await` 只能在 `async` 函数中使用
 
-```
-// js代码
-
+``` js
 function sleep() {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -47,9 +43,7 @@ test()
 `async` 和 `await` 相比直接使用 `Promise` 来说，优势在于处理 `then` 的调用链，能够更清晰准确的写出代码。缺点在于滥用 `await` 可能会导致性能问题，因为 `await` 会阻塞代码，也许之后的异步代码并不依赖于前者，但仍然需要等待前者完成，导致代码失去了并发性。
 
 下面来看一个使用 `await` 的代码。
-```
-// js代码
-
+``` js
 var a = 0
 var b = async () => {
   a = a + await 10
@@ -61,6 +55,7 @@ b()
 a++
 console.log('1', a) // -> '1' 1
 ```
+
 对于以上代码你可能会有疑惑，这里说明下原理
 
 - 首先函数 `b` 先执行，在执行到 `await 10` 之前变量 `a` 还是 0，因为在 `await` 内部实现了 `generators` ， `generators` 会保留堆栈中东西，所以这时候 `a = 0` 被保存了下来
