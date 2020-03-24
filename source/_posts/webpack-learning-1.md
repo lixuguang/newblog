@@ -1217,7 +1217,7 @@ module.exports = {
 
 > 上面两个 `loader` 与 `plugin` 案例只是一个引导，实际开发需求中的 `loader` 与 `plugin` 要考虑的方面很多，建议大家自己多动手尝试一下。
 
-附上官网 [如何编写一个plugin](https://link.zhihu.com/?target=https%3A//www.webpackjs.com/contribute/writing-a-plugin/)
+附上官网 [如何编写一个plugin](https://www.webpackjs.com/contribute/writing-a-plugin/)
 
 ## webpack5.0的时代
 无论是前端框架还是构建工具的更新速度远远超乎了我们的想象,前几年的 `jquery` 一把梭的时代一去不复返。我们要拥抱的是不断更新迭代的 `vue` 、 `react` 、 `node` 、 `serverless` 、 `docker` 、 `k8s` ....
