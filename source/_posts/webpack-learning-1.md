@@ -1188,3 +1188,5 @@ module.exports = {
 
 目前来看，维护者的更新很频繁，相信用不了多久webpack5.0将会拥抱大众。感兴趣的同学可以先安装beta版本尝尝鲜。不过在此之前建议大家先对webpack4进行一番掌握,这样后面的路才会越来越好走。
 
+## 更多阅读
+[webpack中文](https://webpack.docschina.org/)
