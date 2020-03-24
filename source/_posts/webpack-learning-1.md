@@ -1170,8 +1170,8 @@ module.exports = firstPlugin
 - `compiler` 代表了整个 `webpack` 从启动到关闭的生命周期，而 `compilation` 只是代表了一次新的编译过程
 - `compiler` 和 `compilation` 暴露出许多钩子，我们可以根据实际需求的场景进行自定义处理
 
-[compiler钩子文档](https://link.zhihu.com/?target=https%3A//www.webpackjs.com/api/compiler-hooks/)
-[compilation钩子文档](https://link.zhihu.com/?target=https%3A//www.webpackjs.com/api/compilation-hooks/)
+[compiler钩子文档](hhttps://www.webpackjs.com/api/compiler-hooks/)
+[compilation钩子文档](https://www.webpackjs.com/api/compilation-hooks/)
 
 下面我们手动开发一个简单的需求,在生成打包文件之前自动生成一个关于打包出文件的大小信息
 新建一个 `webpack-firstPlugin.js`
