@@ -324,4 +324,5 @@ Vue.use(vcolorpicker)
 
 ## 九、参考文章
 [从零开始搭建Vue组件库 VV-UI](https://zhuanlan.zhihu.com/p/30948290)
-
+[Vue插件开发](https://cn.vuejs.org/v2/guide/plugins.html#%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6)
+[组件基础](https://cn.vuejs.org/v2/guide/components.html)
