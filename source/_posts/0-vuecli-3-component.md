@@ -214,6 +214,8 @@ export default {
 ### 1、package.js 中新增一条编译为库的命令
 在库模式中，Vue是外置的，这意味着即使在代码中引入了 Vue，打包后的文件也是不包含Vue的。
 
+[Vue Cli3 构建目标：库](https://cli.vuejs.org/zh/guide/build-targets.html#%E5%BA%93)
+
 以下我们在 scripts 中新增一条命令
 
 - --target: 构建目标，默认为应用模式。这里修改为 lib 启用库模式。
