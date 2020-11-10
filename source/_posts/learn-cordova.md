@@ -48,7 +48,7 @@ Free and open source
 ## 二、快速上手
 在使用 `Cordova` 做移动端开发之前需要做一些环境准备工作，首先要安装 `node` 以及它携带的 `npm` 包管理器，这个现代的前端开发应该都知道，我这里就不多说了，装它就完了。
 
-装好之后我们就要用npm全局安装一下 `Cordova` 项目的依赖，命令很简单；
+装好之后我们就要用 `npm` 全局安装一下 `Cordova` 项目的依赖，命令很简单；
 
 方便的话还要装一下 `git` ，因为一些命令要在 `git-cmd` 上执行，当然管理代码也是需要它的，所以装吧。
 ``` js
@@ -107,8 +107,9 @@ cordova run browser --target=chrome --port=9090
 这个图理解起来不难，大的方面是两个部分，底层是 `MobileOS` ，也就是手机的操作系统本身，上层是由 `Cordova` 构建的框架；
 
 `Cordova` 内部的话是两层结构：
-上层的话是由前端代码构成的 `WebApp` 部分；
-下层是 `Cordova` 的视图渲染引擎，它为 `WebApp` 提供了 `HtmlApi` 和 `CordovaApi` ；
+* 上层的话是由前端代码构成的 `WebApp` 部分；
+* 下层是 `Cordova` 的视图渲染引擎，它为 `WebApp` 提供了 `HtmlApi` 和 `CordovaApi` ；
+
 也就是说我们可以调用 `html` 的原生 `Api` 也可以使用 `Cordova` 提供的 `jsApi` ；
 
 `Cordova` 还提供了丰富的插件系统；通过 `Cordova` 的视图引擎调用 `Cordova` 的 `NativeApi` 来调用一些 `Cordova` 提供好的调用设备的信息的 `Api` ，另外也可以调用一些用户自定义的 `Api` ；
@@ -128,6 +129,7 @@ cordova run browser --target=chrome --port=9090
 #### 插件系统
 刚刚在上面的架构图中我们介绍了 `Cordova` 的插件系统，它提供了我们通过 `js` 调用 `MobileApi` 的能力，如电源/相机/联系人等等；
 官方维护了核心的功能，当然如果你愿意也可以调用一些第三方提供的插件，你可以方便的通过 `npm` 包管理器安装；
+
 ***但是有一点必须要说***：项目创建后默认是不带任何插件的，即使是官方的核心插件也是需要你自己导入进去，第三方的更不用说了，另外`Cordova` 只提供了功能 `Api` 并不包含任何的 `UI` 部件和 `MV` 框架（你可以根据自己喜欢使用 `Angular` 或者 `Vue` 或者其他什么都可以），这一点要牢记。
 
 #### 开发工作流
@@ -137,12 +139,13 @@ cordova run browser --target=chrome --port=9090
 官网上说了很多，也不难理解，这里用我自己的话说就是， `Cordova` 提供了一个牛叉的 `CLI` 工具，它可以自动的完成一次编码多平台构建的事，你只需要按照它说的方式开发就行。：）
 
 ##### 平台为中心的工作流
-这里不得不说我没有看很明白，但是结合下面的注意事项我是这样理解的，因为只为某一平台服务，所以有一些针对此平台的特殊的功能或者插件你就可以使用了（虽然不太清楚为什么这么做，如果你知道告诉我，谢谢），但是一旦使用了这种开发方式，那么就回不到跨平台开发了，因为你使用了针对某一平台才能调用的代码，这也不难理解，从字里行间感觉就是不建议使用这种开发工作流（好的好的，知道了）。
+这里不得不说我没有看很明白，但是结合下面的注意事项我是这样理解的，因为只为某一平台服务，所以有一些针对此平台的特殊的功能或者插件你就可以使用了（虽然不太清楚为什么这么做，如果你知道告诉我，谢谢），**但是一旦使用了这种开发方式，那么就回不到跨平台开发了**，因为你使用了针对某一平台才能调用的代码，这也不难理解，从字里行间感觉就是不建议使用这种开发工作流（好的好的，知道了）。
 
 好的，接下来开发 `App` 啦；
 
 ### 2、开发应用
 快速上手中已经介绍了如何准备、创建和启动应用，如何添加平台，这里就不多说了。说些没讲过的。
+
 上面说过检查目前平台安装情况的话可以使用下面的命令
 ``` js
 cordova platforms
@@ -151,9 +154,9 @@ cordova platforms
 ``` js
 cordova platform ls
 ```
-** 事后我发现，无论我使用的命令是 `platform` 还是 `platforms` 加不加 `ls` 都可以查到当前安装的平台。。。 啊~兼容性好强。
+> 事后我发现，无论我使用的命令是 `platform` 还是 `platforms` 加不加 `ls` 都可以查到当前安装的平台。。。 啊~兼容性好强。
 
-每执行一次 `add` 命令，你就会发现工程目录下的 `platforms` 目录下就对应生成了一个对应平台的文件夹，切勿手贱删除，你虽然删除了文件夹，但是各处设置的platform并没有去掉，会导致报错，如果要删除请使用 `remove` 命令。 想知道还有哪些命令的话就看下面的链接吧。⇒ [命令大全](http://cordova.axuer.com/docs/zh-cn/latest/reference/cordova-cli/index.html#cordova-platform-command)
+每执行一次 `add` 命令，你就会发现工程目录下的 `platforms` 目录下就对应生成了一个对应平台的文件夹，切勿手贱删除，你虽然删除了文件夹，但是各处设置的 `platform` 并没有去掉，会导致报错，如果要删除请使用 `remove` 命令。 想知道还有哪些命令的话就看下面的链接吧。⇒ [命令大全](http://cordova.axuer.com/docs/zh-cn/latest/reference/cordova-cli/index.html#cordova-platform-command)
 
 ### 安装构建的先决条件
 因为 `Cordova` 的底层还是要调用 `MobileOS` 的接口，所以各平台的 `SDK` 是必须要装的，当然这里指的是你要进行构建的平台，比如你要构建 `Android` 应用，那么你就要装 `Android` 的 `SDK` ，`IOS` 同理。**这里有一个例外**`broswer`平台是不需要依赖其他 `SDK` 的（明明是开发 `APP` ，这里只是为了验证画面比较方便）
@@ -180,7 +183,7 @@ Error: Some of requirements check failed
 * [iOS平台的要求](http://cordova.axuer.com/docs/zh-cn/latest/guide/platforms/ios/index.html#requirements-and-support)
 * [Windows平台的要求](http://cordova.axuer.com/docs/zh-cn/latest/guide/platforms/win8/index.html#requirements-and-support)
 
-### 构建App
+### 构建 `App`
 在 `create` 项目之后，项目的根目录下会生成一个 `www` 目录，这个目录包含了 `webapp` 的入口页面 `index.html` ，入口文件的话是 `www/js/index.js` 文件的 `deviceready` 事件中。
 
 如果要构建代码的话，执行下面的命令
@@ -193,8 +196,8 @@ cordova build ios
 ```
 如果想了解更多的参数的话，可以看一下后面的链接。⇒ [更多参数](http://cordova.axuer.com/docs/zh-cn/latest/reference/cordova-cli/index.html#cordova-build-command)
 
-### 测试App
-构建完app之后我们就可以测试了，通常各平台的SDK中会提供模拟器，我们只需要执行下面的命令就可以启动模拟器。
+### 测试 `App`
+构建完 `App` 之后我们就可以测试了，通常各平台的 `SDK` 中会提供模拟器，我们只需要执行下面的命令就可以启动模拟器。
 ``` js
 cordova emulate android
 ```
@@ -211,7 +214,7 @@ cordova run android
 如果只是开发一个 `Cordova` 框架的 `WebApp` ，那么你不需要装任何插件，直接用前端技术开发就好了，但是应该没人会这么做吧，毕竟开发这个的目的就是为了跨平台开发原生级移动 `App` ，因此要调用移动设备的各种功能就必须安装插件。
 
 #### 插件
-`Cordova` 插件是一些使用 `Javascript` 调用原生SDK功能的包；
+`Cordova` 插件是一些使用 `Javascript` 调用原生 `SDK` 功能的包；
 你可以使用两种方式找到你想要的插件
 1. 通过 `Cordova` 提供的包管理平台 ⇒ [插件搜索页](http://cordova.axuer.com/plugins/)
 2. 通过命令行搜索 ***`cordova plugin search camera`***
