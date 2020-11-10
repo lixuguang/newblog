@@ -187,4 +187,60 @@ cordova run android
 * [Cordova emulate 命令参考文档](http://cordova.axuer.com/docs/zh-cn/latest/reference/cordova-cli/index.html#cordova-emulate-command)
 
 ### 添加插件
+如果只是开发一个Cordova框架的webapp，那么你不需要装任何插件，直接用前端技术开发就好了，但是应该没人会这么做吧，毕竟开发这个的目的就是为了跨平台开发原生级移动App，因此要调用移动设备的各种功能就必须安装插件。
+
+#### 插件
+Cordova 插件是一些使用Javascript调用原生SDK功能的包；你可以使用两种方式找到你想要的插件
+1. 通过Cordova提供的包管理平台 ⇒ [插件搜索页](http://cordova.axuer.com/plugins/)
+2. 通过命令行搜索 `cordova plugin search camera`
+
+选好你要安装的插件之后你需要执行下面的命令来安装它
+``` js
+cordova plugin add <plugin name> // 如 cordova plugin add cordova-plugin-chrome-apps-proxy
+```
+如果你的包没有发布在Cordova的平台上，也可以使用git地址来安装。
+另外Cordova还非常贴心的提供了一个工具 `Plugman` 来帮助开发者更好的管理Cordova插件。⇒ [Plugman参考](http://cordova.axuer.com/docs/zh-cn/latest/plugin_ref/plugman.html)
+
+如果要查看你安装了哪些插件可以使用下面任意一种命令都可以。（咱也不知道为啥提供这么多方式，反正好用无脑）
+``` js
+plugin ls
+plugin list
+plugin
+
+/**
+$ cordova plugin ls
+cordova-plugin-whitelist 1.2.1 "Whitelist"
+*/
+```
+如果想知道更多关于 plugin 的命令参数，可以看右边的链接 ⇒ [plugin参数](http://cordova.axuer.com/docs/zh-cn/latest/reference/cordova-cli/index.html#cordova-plugin-command)
+
+#### 使用 `merges` 自定义每个平台
+虽然可以用一套代码来构建多个平台，但一些平台会有自己的特点，就好像chrome浏览器默认的字体大小与IE的不同，Android与IOS也有不一样的地方，这种情况下去改 www 目录下的文件显然是不合适的，所以 Cordova 提供了 merges 方式来适配不同平台各自的特别处理，你要做的就是在项目的根目录下创建一个 merges 目录，比如你要适配Android，你就可以在 merges 下创建一个 android 目录，然后在下面或覆盖或添加新的资源。（这里官网没有说merges在哪里创建，试验后发现是在根目录下）
+
+#### 更新Cordova和你的项目
+如果你要更新你的Cordova（通常不建议这么干，当然你知道后果并想要使用新的特性或者修正bug除外），那么你需要执行一下 update 命令
+``` js
+sudo npm update -g cordova
+```
+当然你也可以指定更新到什么版本（这都是npm的知识了）
+``` js
+sudo npm install -g cordova@3.1.0-0.2.0
+```
+你也可以使用下面的命令查看当前的版本（还是npm的知识）
+``` js
+npm info cordova version
+```
+你是不是以为这样就可以了，不好意思还不行，你还需要把各个平台进行一下升级
+``` js
+cordova platform update android --save
+cordova platform update ios --save
+// ...
+```
+其实这也好理解，你都已经轿车换suv了，总不能还用原来的车轱辘吧，只是我希望能不能在换车的时候一块儿把车轱辘换了（这里的意思是希望直接自动化处理了）
+
+到这里你的第一个App就已经开发好了，是不是还有点成就感。
+
+### 一些参考资料
+
 （待续...）
+
