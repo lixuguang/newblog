@@ -86,4 +86,3 @@ git clone https://github.com/lixuguang/li-app.git li-app
 cd li-app && npm install && ionic serve
 ```
 （待续...）
-
