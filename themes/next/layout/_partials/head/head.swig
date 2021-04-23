@@ -4,22 +4,22 @@
 <meta name="generator" content="Hexo {{ hexo_version }}">
 
 {%- if theme.favicon.apple_touch_icon %}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for(theme.favicon.apple_touch_icon) }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for_lang(theme.favicon.apple_touch_icon) }}">
 {%- endif %}
 {%- if theme.favicon.medium %}
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for(theme.favicon.medium) }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for_lang(theme.favicon.medium) }}">
 {%- endif %}
 {%- if theme.favicon.small %}
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for_lang(theme.favicon.small) }}">
 {%- endif %}
 {%- if theme.favicon.safari_pinned_tab %}
-  <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}" color="{{ theme.android_chrome_color }}">
+  <link rel="mask-icon" href="{{ url_for_lang(theme.favicon.safari_pinned_tab) }}" color="{{ theme.android_chrome_color }}">
 {%- endif %}
 {%- if theme.favicon.android_manifest %}
-  <link rel="manifest" href="{{ url_for(theme.favicon.android_manifest) }}">
+  <link rel="manifest" href="{{ url_for_lang(theme.favicon.android_manifest) }}">
 {%- endif %}
 {%- if theme.favicon.ms_browserconfig %}
-  <meta name="msapplication-config" content="{{ url_for(theme.favicon.ms_browserconfig) }}">
+  <meta name="msapplication-config" content="{{ url_for_lang(theme.favicon.ms_browserconfig) }}">
 {%- endif %}
 
 {%- if theme.disable_baidu_transformation %}
@@ -39,11 +39,11 @@
   <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}">
 {%- endif %}
 
-<link rel="stylesheet" href="{{ url_for(theme.css) }}/main.css">
+<link rel="stylesheet" href="{{ url_for_lang(theme.css) }}/main.css">
 
 {{ next_font() }}
 
-{%- set font_awesome_uri = theme.vendors.fontawesome or next_vendors('font-awesome/css/font-awesome.min.css') %}
+{%- set font_awesome_uri = theme.vendors.fontawesome or next_vendors('font-awesome/css/all.min.css') %}
 <link rel="stylesheet" href="{{ font_awesome_uri }}">
 
 {%- if theme.fancybox %}
@@ -58,33 +58,4 @@
   <script src="{{ pace_js_uri }}"></script>
 {%- endif %}
 
-{# Export some Hexo Configurations to Front-End #}
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('{{ config.url }}').hostname,
-    root: '{{ config.root }}',
-    scheme: '{{ theme.scheme }}',
-    version: '{{ next_version }}',
-    exturl: {{ theme.exturl }},
-    sidebar: {{ theme.sidebar | json }},
-    copycode: {{ theme.codeblock.copy_button | json }},
-    back2top: {{ theme.back2top | json }},
-    bookmark: {{ theme.bookmark | json }},
-    fancybox: {{ theme.fancybox }},
-    mediumzoom: {{ theme.mediumzoom }},
-    lazyload: {{ theme.lazyload }},
-    pangu: {{ theme.pangu }},
-    comments: {{ theme.comments | json }},
-    algolia: {
-      appID: '{{ config.algolia.applicationID }}',
-      apiKey: '{{ config.algolia.apiKey }}',
-      indexName: '{{ config.algolia.indexName }}',
-      hits: {{ theme.algolia_search.hits | json }},
-      labels: {{ theme.algolia_search.labels | json }}
-    },
-    localsearch: {{ theme.local_search | json }},
-    path: '{{ config.search.path }}',
-    motion: {{ theme.motion | json }}
-  };
-</script>
+{{ next_config() }}

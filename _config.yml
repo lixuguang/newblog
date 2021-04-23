@@ -8,7 +8,12 @@ subtitle: '求知若饥，虚心若愚。'
 description: '学习 | 生活 | 一切'
 keywords: 李旭光
 author: 李旭光
-language: zh-CN
+# hexo default is empty, change to exact languages, and add xx.yml under your theme languages dir.
+language: [zh-CN,en,ja]
+# config hexo-generator-i18n option (optional, this is default option)
+i18n:
+  type: [page, post]
+  generator: [archive, category, tag, index]
 timezone: ''
 
 # URL
@@ -58,7 +63,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 1
   order_by: -date
 
 # Category & Tag
@@ -77,7 +82,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination

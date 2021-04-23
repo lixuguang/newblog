@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-05-28 17:35:35
- * @LastEditTime: 2020-05-28 17:37:28
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \newblog\source\_posts\Prettier-Setting.md
---> 
 ---
 title: Prettier格式化配置
 date: 2020-05-28

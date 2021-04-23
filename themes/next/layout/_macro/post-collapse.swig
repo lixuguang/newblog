@@ -7,7 +7,7 @@
   {%- if year !== current_year %}
     {%- set current_year = year %}
     <div class="collection-year">
-      <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="collection-header">{{ current_year }}</{%- if theme.seo %}h2{% else %}h1{%- endif %}>
+      <span class="collection-header">{{ current_year }}</span>
     </div>
   {%- endif %}
 
@@ -22,17 +22,17 @@
         </time>
       </div>
 
-      <{%- if theme.seo %}h3{% else %}h2{%- endif %} class="post-title">
+      <div class="post-title">
         {%- if post.link %}{# Link posts #}
-          {%- set postTitleIcon = '<i class="fa fa-external-link"></i>' %}
+          {%- set postTitleIcon = '<i class="fa fa-external-link-alt"></i>' %}
           {%- set postText = post.title or post.link %}
           {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
         {% else %}
-          <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
+          <a class="post-title-link" href="{{ url_for_lang(post.path) }}" itemprop="url">
             <span itemprop="name">{{ post.title or __('post.untitled') }}</span>
           </a>
         {%- endif %}
-      </{%- if theme.seo %}h3{% else %}h2{%- endif %}>
+      </div>
 
     </header>
   </article>

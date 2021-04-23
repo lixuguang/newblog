@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-05-14 10:52:24
- * @LastEditTime: 2020-05-14 11:08:55
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \newblog\source\_posts\css3-pointer-events.md
- -->
 ---
 title: css3新属性-pointer-events
 date: 2020-05-14

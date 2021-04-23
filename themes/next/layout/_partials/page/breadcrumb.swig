@@ -18,7 +18,7 @@
           {%- if path.includes('.html') %}
             <li>{{ path | replace('.html', '') | upper }}</li>
           {% else %}
-            <li><a href="{{ url_for(link) }}/">{{ path | upper }}</a></li>
+            <li><a href="{{ url_for_lang(link) }}/">{{ path | upper }}</a></li>
           {%- endif %}
         {%- endif %}
       {%- endif %}
