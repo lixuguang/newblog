@@ -2,6 +2,7 @@
 title: Could not proxy request XXX from localhost:8080 to localhost:8081
 date: 2020-02-12 09:00:00
 categories: 
+	- 前端技术
 	- 前端问题
 tags:
 	- 奇怪问题

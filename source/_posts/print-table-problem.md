@@ -2,6 +2,7 @@
 title: 由打印引起的一点小问题，写table时别忘了写thead和tbody
 date: 2020-02-12 08:30:00
 categories: 
+	- 前端技术
 	- 前端问题
 tags:
 	- 奇怪问题
