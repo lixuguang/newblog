@@ -2,6 +2,7 @@
 title: 如何利用GitHub-Hexo-Next搭建一个漂亮的技术博客
 date: 2017-10-11 16:18:48
 categories: 
+  - 杂七杂八
   - 博客技巧
 tags: 
   - Hexo

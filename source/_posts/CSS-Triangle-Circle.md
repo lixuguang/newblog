@@ -2,7 +2,7 @@
 title: CSS border三角、圆角图形生成技术详解
 date: 2013-06-26 22:22:22
 categories: 
-  - 前端基础
+  - 前端技术
 	- CSS
 tags: 
 	- CSS技巧

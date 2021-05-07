@@ -2,6 +2,7 @@
 title: 巧妙利用Acitons进行博客的自动构建
 date: 2019-12-27 22:22:22
 categories: 
+  - 杂七杂八
 	- 博客技巧
 tags: 
 	- Github
