@@ -2,7 +2,8 @@
 title: Prettier格式化配置
 date: 2020-05-28
 categories: 
-  - 前端工具
+  - 效率工具
+  - VSCode插件
 tags: 
   - Prettier
 ---
