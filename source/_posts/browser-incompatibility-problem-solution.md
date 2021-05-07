@@ -1,7 +1,8 @@
 ---
 title: 浏览器兼容性问题解决方案
 date: 2017-08-29 17:04:31
-categories: 
+categories:
+  - 前端基础
   - CSS
 tags: 
   - 兼容性问题
