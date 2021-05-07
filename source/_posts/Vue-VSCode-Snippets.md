@@ -5,7 +5,7 @@ categories:
 	- 效率工具
 	- VSCode插件
 tags: 
-	- VUE
+	- Vue
 	- 插件
 ---
 > 作者：李旭光

@@ -2,11 +2,11 @@
 title: npm相关资料
 date: 2017-08-30 12:24:49
 categories: 
-	- Nodejs
+	- NodeJS
 	- Npm
 tags:
 	- npm
-	- node
+	- NodeJS
 	- rnpm
 ---
 > 作者：李旭光

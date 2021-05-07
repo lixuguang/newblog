@@ -47,7 +47,7 @@ XSS分为：**存储型**和**反射型**
 - ASP的Server.HTMLEncode()。
 - ASP.NET的Server.HtmlEncode()或功能更强的Microsoft Anti-Cross Site Scripting Library
 - Java的xssprotect (Open Source Library)。
-- Node.js的node-validator。
+- NodeJS的node-validator。
 
 #### 使用HTTP头指定类型
 很多时候可以使用HTTP头指定内容的类型，使得输出的内容避免被作为HTML解析。如在PHP语言中使用以下代码：

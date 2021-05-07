@@ -2,7 +2,7 @@
 title: Webpack 打包时利用 UglifyJsPlugin 去掉comments 、console 、和 debugger
 date: 2020-04-07 11:22:00
 categories: 
-	- webpack
+	- Webpack
 tags: 
 	- UglifyJsPlugin
 ---

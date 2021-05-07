@@ -1,10 +1,10 @@
 ---
-title: Nodejs 下 RESTful 架构的最佳实践（课堂笔记）
+title: NodeJS 下 RESTful 架构的最佳实践（课堂笔记）
 date: 2020-02-11 16:00:00
 categories: 
-	- Nodejs
+	- NodeJS
 tags:
-	- Nodejs
+	- NodeJS
 	- RESTful
 ---
 > 作者：李旭光

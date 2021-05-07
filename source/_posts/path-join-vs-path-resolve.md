@@ -2,9 +2,9 @@
 title: path.join 与 path.resolve 的区别
 date: 2020-03-23 14:42:52
 categories: 
-	- Nodejs
+	- NodeJS
 tags: 
-	- Nodejs
+	- NodeJS
 ---
 
 # path.join 与 path.resolve 的区别

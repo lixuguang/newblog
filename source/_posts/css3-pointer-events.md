@@ -1,8 +1,8 @@
 ---
-title: css3新属性-pointer-events
+title: CSS3新属性-pointer-events
 date: 2020-05-14
 categories: 
-  - css3
+  - CSS3
 tags: 
   - 技巧
 ---

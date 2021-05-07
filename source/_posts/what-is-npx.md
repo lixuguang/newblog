@@ -2,7 +2,7 @@
 title: npx是什么
 date: 2020-04-16 
 categories: 
-  - node
+  - NodeJS
 tags: 
   - npx
 ---
