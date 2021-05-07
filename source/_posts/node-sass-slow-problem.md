@@ -2,7 +2,8 @@
 title: 如何解决npm安装node-sass依赖慢的情况
 date: 2020-04-15 23:24:49
 categories: 
-  - node
+  - NodeJS
+  - Npm
 tags:
 	- sass
 ---
