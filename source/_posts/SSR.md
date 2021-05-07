@@ -1,11 +1,10 @@
 ---
 title: SSR
-date: 2020-02-11 16:00:00
-categories: 
-	- 前端技术
+categories:
+  - 前端技术
 tags:
-	- 同构
-	- 服务端渲染
+  - blog
+date: 2020-02-11 16:00:00
 ---
 > 作者：李旭光
 > 引用请标明出处
@@ -25,3 +24,10 @@ tags:
 - vue
 - vue-server-renderer
 # vue + next
+> 作者：李旭光
+> 引用请标明出处
+
+## 前言
+
+
+<!-- more -->
