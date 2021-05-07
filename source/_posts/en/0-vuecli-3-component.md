@@ -2,7 +2,8 @@
 title: 从零开始：Vue cli3 库模式搭建组件库并发布到npm【转载】
 date: 2020-04-16
 categories: 
-  - Vue
+  - 前端框架
+	- Vue
 tags: 
   - 打包
 ---
