@@ -1,7 +1,8 @@
 ---
 title: 从零开始：学习Cordova（二）
 date: 2020-11-10
-categories: 
+categories:
+  - 大前端
   - 移动开发
 tags: 
   - Cordova
